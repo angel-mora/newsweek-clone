@@ -1,0 +1,54 @@
+html,
+body,
+div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+form,
+legend,
+label,
+table,
+header,
+footer,
+nav,
+section,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  list-style: none outside none;
+  border: 0 none;
+  outline: 0 none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #f4f5f6;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=style.css.map */
