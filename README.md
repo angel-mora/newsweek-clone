@@ -11,8 +11,22 @@ Microverse
     - Complete main boxes layout
 - Sunday
     - Fix issues
-- Monday
-    - submit
+- Monday 16th
+    - submit 
+
+Monday 16th NO ADVANCE YET
+Duties for today:
+
+- Review Bootstrap basics
+- Work with navbar
+
+11-11.30 Declutter tabs
+
+Tuesday:
+
+- Work on Mobile version
+
+
 
 ## Built With
 
@@ -45,3 +59,15 @@ Thanks to Microverse!
 ## 📝 License
 
 none
+
+## PROJEC NOTES
+
+In order to accomplish this project, I revievewd both Bootstrap and SASS.
+
+### BOOTSTRAP CONCEPTS
+
+
+
+### SASS MAIN CONCEPTS
+
+
