@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/03774beff9.js" crossorigin="anonymous"></script>
 
 
@@ -13,20 +15,20 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid header">
+    <header class="d-flex align-items-center header">
+        <div class="d-flex flex-row justify-content-between navbar">
 
-            <div class="row">
-                <p class="d-none d-lg-block">Thu, Mar 05, 2020</p>
+            <div class="d-flex flex-row justify-content-between order-2">
 
-                <a href="#">SIGN IN</a>
-                <a href="#">SUSCRIBE</a>
-                <a href="#">
-                    <i class="fas fa-bars"></i>
+                <p class="date">Thu, Mar 05, 2020</p>
+
+                <a href="#" class="d-flex align-items-center justify-content-center sign-in">SIGN IN</a>
+                <a href="#" class="white-box-red-font d-flex align-items-center justify-content-center" id="red">SUSCRIBE</a>
+                <a href="#" class="d-flex align-items-center justify-content-center" id="pink">
+                    <i class="fas fa-bars fa-2x d-lg-none"></i>
                 </a>
-
-                <a href="#" class="d-none">22° Mexico City</a>
-
+            </div>
+            <div class="d-flex flex-row order-1">
                 <a href="#">
                     <svg class="header-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
                         <path
@@ -34,25 +36,29 @@
                         </path>
                     </svg>
                 </a>
+                <i class="fas fa-cloud-sun" id="weather-icon"><span>24°</span></i>
+                <a href="#" class="location">Mexico City, MX</a>
             </div>
 
-            <nav class="navbar d-none">
-                <ul class="">
-                    <li>U.S.</li>
-                    <li>World</li>
-                    <li>Business</li>
-                    <li>Tech & Science</li>
-                    <li>Culture</li>
-                    <li>Newsgeek</li>
-                    <li>Sports</li>
-                    <li>Health</li>
-                    <li>The Debate</li>
-                    <li>Vantage</li>
-                    <li>Weather</li>
-                    <li>Search</li>
-                </ul>
-            </nav>
         </div>
+
+        <nav class="navbar d-none">
+            <ul class="">
+                <li>U.S.</li>
+                <li>World</li>
+                <li>Business</li>
+                <li>Tech & Science</li>
+                <li>Culture</li>
+                <li>Newsgeek</li>
+                <li>Sports</li>
+                <li>Health</li>
+                <li>The Debate</li>
+                <li>Vantage</li>
+                <li>Weather</li>
+                <li>Search</li>
+            </ul>
+        </nav>
+
     </header>
 
     <main class="container-fluid">
