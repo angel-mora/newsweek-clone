@@ -1,6 +1,7 @@
 $red:#f72210;
 $white: white;
 $pink: #fb9a94;
+$grey: #555;
 $roboto: 'Roboto Condensed',
 sans-serif;
 $arial: Arial,
@@ -58,6 +59,18 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    background-color: #f4f5f6;
+}
+
+.big-header {
+    background-color: $red;
+}
+
+.none {
+    display: none;
+}
+
 .header {
     background-color: $red;
     height: 50px;
@@ -107,6 +120,58 @@ body {
 
 #weather-icon {
     display: none;
+}
+
+.top-story {
+    background-color: $white;
+    width: 100%;
+}
+
+.top-story-img {
+    width: 100%;
+}
+
+.top-story-title {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 1rem;
+}
+
+.top-story-h2 {
+    font-family: $roboto;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.top-story-p {
+    font-size: 13px;
+    margin-top: -1rem;
+}
+
+.block-container {
+    margin-bottom: 10px;
+}
+
+.opinion {
+    .media-body {
+        margin-top: 20px;
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
+}
+
+.opinion-title {
+    margin-bottom: -20px;
 }
 
 // 
