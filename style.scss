@@ -1,3 +1,4 @@
+// variables
 $red:#f72210;
 $white: white;
 $pink: #fb9a94;
@@ -7,6 +8,7 @@ sans-serif;
 $arial: Arial,
 Helvetica,
 sans-serif;
+// universal-setup
 html,
 body,
 div,
@@ -59,10 +61,11 @@ body {
     overflow-x: hidden;
 }
 
-section {
+main {
     background-color: #f4f5f6;
 }
 
+// header
 .big-header {
     background-color: $red;
 }
@@ -122,9 +125,11 @@ section {
     display: none;
 }
 
+// main section
+// sticky-grid
 .section-card {
     background-color: $white;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 100%;
 }
 
@@ -132,11 +137,10 @@ section {
     width: 100%;
 }
 
-.top-story-title {
+.h1-title {
     color: #aaa;
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-top: 1rem;
+    font-size: 16px;
+    font-family: $roboto;
 }
 
 .top-story-h2 {
@@ -156,10 +160,6 @@ section {
     font-family: $arial !important;
     text-transform: none !important;
     font-weight: 400 !important;
-}
-
-.block-container {
-    margin-bottom: 10px;
 }
 
 .opinion {
