@@ -122,8 +122,9 @@ section {
     display: none;
 }
 
-.top-story {
+.section-card {
     background-color: $white;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -149,6 +150,14 @@ section {
     margin-top: -1rem;
 }
 
+.description {
+    font-size: 13px;
+    margin-top: 5px;
+    font-family: $arial !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
+}
+
 .block-container {
     margin-bottom: 10px;
 }
@@ -170,8 +179,66 @@ section {
     }
 }
 
+#opinion-border-red {
+    border-top: 3px solid $red;
+    border-bottom: 3px double #aaa;
+    margin-bottom: -10px;
+}
+
+#opinion-border-blue {
+    border-top: 3px solid #1c87fb;
+    border-bottom: 3px double #aaa;
+    margin-bottom: -10px;
+}
+
 .opinion-title {
     margin-bottom: -20px;
+}
+
+.opinion-author {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 5px;
+    span {
+        font-weight: bold;
+    }
+}
+
+.opinion-author-2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 15px;
+    span {
+        font-weight: bold;
+    }
+}
+
+.debate-author {
+    position: relative;
+    top: -15px;
+    right: 15px;
+    width: 67px;
+    height: 63px;
+}
+
+.vs {
+    span {
+        height: 45px;
+        width: 45px;
+        line-height: 30px;
+        border-radius: 30px;
+        background-color: black;
+        color: #d6d6d6;
+        text-align: center;
+        font-size: 1em;
+        font-family: $roboto;
+    }
+}
+
+.newsletter-logo {
+    background-color: $red;
+    width: 29px;
+    height: 28px;
 }
 
 // 

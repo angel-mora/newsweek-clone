@@ -69,9 +69,8 @@
     </header>
 
     <main class="container-fluid p-0">
-        <section class="d-flex flex-column top-story row no-gutters">
+        <section class="d-flex flex-column section-card row no-gutters">
             <article class="p-2 container block-container card">
-                <!-- margin bottom 2 -->
                 <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start">Top Story
                 </h1>
                 <div class="">
@@ -83,7 +82,7 @@
             </article>
         </section>
 
-        <section class="d-flex flex-column top-story row no-gutters">
+        <section class="d-flex flex-column section-card row no-gutters">
             <article class="p-2 card">
                 <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start">Featured Stories
                 </h1>
@@ -96,7 +95,7 @@
             </article>
         </section>
 
-        <section class="d-flex flex-column top-story row no-gutters">
+        <section class="d-flex flex-column section-card row no-gutters">
             <article class="p-2 card">
                 <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title">
                     Opinion
@@ -119,29 +118,96 @@
             </article>
         </section>
 
-        <section class="d-flex flex-column top-story row no-gutters">
+        <section class="d-flex flex-column section-card row no-gutters">
             <article class="p-2 card">
-                <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title">
+                <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-1">
                     The Debate
                 </h1>
-                <div class="opinion media border-top mb-0">
-                    <img src="images/img-the-debate.jpg" alt="" class="pr-1 align-self-center">
+                <div class="opinion media mb-0 pl-2 pr-2 mr-2" id="opinion-border-red">
+                    <img src="images/img-the-debate.jpg" alt="" class="pr-1 align-self-center mt-0 pt-0">
                     <div class="media-body p-2">
                         <h2>Protecting Us All From an Epidemic Should Be Prioritized Over the Economy</h2>
-                        <p class="opinion-author">By Nigel Farage</p>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="opinion-author">By <span>Nigel Farage</span></p>
+                    <img src="images/opinion.png" alt="" class="pr-1 align-self-center debate-author">
+                </div>
+
+                <div class="vs d-flex justify-content-center align-items-center">
+                    <span class="d-flex justify-content-center align-items-center">VS</span>
+                </div>
+
+                <div class="opinion media mt-4 pl-2 pr-2 mr-2" id="opinion-border-blue">
+                    <img src="images/img-the-debate-2.jpg" alt="" class="pr-1 align-self-center mt-0 pt-0">
+                    <div class="media-body p-2">
+                        <h2>In This Fight Against Coronavirus, We Need to Protect Both Lives and Livelihoods</h2>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="opinion-author-2">By <span>Asad Hamir</span></p>
+                    <img src="images/img-the-debate-author2.png" alt="" class="pr-1 align-self-center debate-author">
+                </div>
+            </article>
+        </section>
+
+        <section class="d-flex flex-column section-card row no-gutters">
+            <article class="p-2 card">
+                <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-1">
+                    More stories
+                </h1>
+                <div class="opinion media border-top border-bottom mb-0">
+                    <img src="images/more-stories-1.jpg" alt="" class="pr-1 align-self-center">
+                    <div class="media-body p-2">
+                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                        <p class="description">The World Health Organization has warned that "Africa should wake up" as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                        </p>
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
+                <div class="opinion media border-bottom mt-1 mb-0">
+                    <img src="images/more-stories-2.jpg" alt="" class="pr-1 align-self-center">
+                    <div class="media-body p-2">
+                        <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China</h2>
+                        <p class="opinion-author">By Nigel Farage</p>
+                    </div>
+                </div>
             </article>
+        </section>
+
+        <section>
+            <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-1">
+                Culture & Travel
+            </h1>
+            <article>
+                <img src="images/culture-travel-image-1.jpg" alt="">
+                <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                <p>What to do with the free time available when trips to the movies, a museum or the theater are out of the question? Here is a list of museums and other popular tourist attractions that have entire collections or performances available online.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1 class="p-2 top-story-title font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-1">
+                Latest News
+            </h1>
+            <article class="media">
+                <img src="images/latest-news-image-1.jpg" alt="">
+                <div class="media-body">
+                    <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                </div>
+            </article>
+        </section>
+
+        <section class="border d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo ">
+                <h2>Sign Up for our Newsletter</h2>
+            </div>
+            <button class="button">SIGN UP</button>
+            <p>Update your preferences</p>
+
         </section>
     </main>
 
