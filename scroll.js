@@ -1,7 +1,7 @@
 $(window).on("scroll", function() {
     if ($(this).scrollTop() < 170) {
-        $(".big-header").addClass("transparent");
+        $(".header").addClass("none");
     } else {
-        $(".header-alt").removeClass("transparent");
+        $(".big-header").removeClass("none");
     }
 });

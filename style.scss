@@ -68,10 +68,13 @@ main {
 // header
 .big-header {
     background-color: $red;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 .header {
@@ -83,6 +86,9 @@ main {
     a {
         color: $white;
     }
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .header-logo {
@@ -103,12 +109,6 @@ main {
 
 .date {
     color: $white;
-    display: none;
-    margin-left: 10px;
-}
-
-.location {
-    display: none;
     margin-left: 10px;
 }
 
