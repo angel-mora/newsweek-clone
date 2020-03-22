@@ -54,6 +54,7 @@ body {
 
 main {
   background-color: #f4f5f6;
+  max-width: 1310px;
 }
 
 .big-header {
@@ -62,10 +63,45 @@ main {
   position: sticky;
   top: 0;
   z-index: 99;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  max-width: 1310px;
 }
 
-.none {
-  display: none !important;
+.big-header .header-top {
+  height: 95px;
+}
+
+.big-header .header-top a:hover {
+  text-decoration: none;
+}
+
+.big-header .header-top .today {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.big-header .header-top .header-logo {
+  fill: white;
+}
+
+.big-header .header-top .sign-in {
+  color: white;
+}
+
+.big-header .header-bottom {
+  height: 56px;
+  background-color: white;
+  color: black;
+  font-size: 19px;
+}
+
+.big-header .header-bottom a {
+  color: black;
+}
+
+.big-header .header-bottom a:hover {
+  text-decoration: none;
+  color: #f72210;
 }
 
 .header {
@@ -73,7 +109,8 @@ main {
   height: 50px;
   margin: 0;
   padding: 0;
-  font: bold 14px "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -84,7 +121,7 @@ main {
   color: white;
 }
 
-.header-logo {
+.header .header-logo {
   width: 132px;
   fill: white;
 }
@@ -226,6 +263,10 @@ main {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.location {
+  display: none;
+}
+
 .newsletter-logo {
   background-color: #f72210;
   width: 29px;
@@ -248,6 +289,7 @@ main {
   }
   #weather-icon span {
     font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
   }
 }
 
@@ -272,7 +314,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,21 +10,20 @@
 
     <script src="https://kit.fontawesome.com/03774beff9.js" crossorigin="anonymous"></script>
 
-
-    <title>Clone Newsweek</title>
+    <title>Newsweek Clone</title>
 </head>
 
 <body>
-
+    <script src=" https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity=" sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin=" anonymous ">
+    </script>
     <!-- Review on this later-->
     <script src="scroll.js"></script>
 
-
-    <header class="big-header container-fluid d-none d-lg-flex flex-column">
-        <div class="row d-flex">
-            <div class="col">
-                <i class="fas fa-cloud-sun"><span>24°</span>Mexico City, MX</i>
-                <p class="date">Thu, Mar 05, 2020</p>
+    <header class="big-header container-fluid d-none d-lg-flex flex-column border-bottom">
+        <div class="row d-flex header-top">
+            <div class="col today pt-3 pl-4">
+                <p class="font-weight-bold"><i class="fas fa-cloud-sun"></i>24° Mexico City, MX</p>
+                <p>Thu, Mar 05, 2020</p>
             </div>
             <div class="col d-flex justify-content-center align-items-center">
                 <a href="#">
@@ -35,38 +34,36 @@
                     </svg>
                 </a>
             </div>
-            <div class="col justify-content-end d-flex align-items-end">
+            <div class="col justify-content-end d-flex align-items-end mb-3 font-weight-bold">
                 <a href="#" class="sign-in">SIGN IN</a>
-                <a href="#" class="white-box-red-font text-center" id="red">SUSCRIBE</a>
+                <a href="#" class="white-box-red-font text-center" id="red">SUSCRIBE &gt;</a>
             </div>
         </div>
-        <div class="row">
+        <div class="row font-weight-bold header-bottom">
             <nav class="navbar">
-                <ul class="d-flex">
-                    <li>U.S.</li>
-                    <li>World</li>
-                    <li>Business</li>
-                    <li>Tech & Science</li>
-                    <li>Culture</li>
-                    <li>Newsgeek</li>
-                    <li>Sports</li>
-                    <li>Health</li>
-                    <li>The Debate</li>
-                    <li>Vantage</li>
-                    <li>Weather</li>
-                    <li>Search</li>
-                </ul>
+                <a href="#">U.S.</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Tech & Science</a>
+                <a href="#">Culture</a>
+                <a href="#">Newsgeek</a>
+                <a href="#">Sports</a>
+                <a href="#">Health</a>
+                <a href="#">The Debate</a>
+                <a href="#">Vantage</a>
+                <a href="#">Weather</a>
+                <a href="#">Search</a>
             </nav>
         </div>
     </header>
 
-    <header class="d-flex align-items-center header d-lg-none">
+    <header class="d-flex align-items-center header d-lg-none font-weight-bold">
         <div class="d-flex flex-row justify-content-between navbar">
 
             <div class="d-flex flex-row justify-content-between order-2">
 
                 <a href="#" class="d-flex align-items-center justify-content-center sign-in">SIGN IN</a>
-                <a href="#" class="white-box-red-font d-flex align-items-center justify-content-center" id="red">SUSCRIBE</a>
+                <a href="#" class="white-box-red-font d-flex align-items-center justify-content-center" id="red">SUSCRIBE &gt;</a>
                 <a href="#" class="d-flex align-items-center justify-content-center" id="pink">
                     <i class="fas fa-bars fa-2x d-lg-none"></i>
                 </a>
@@ -79,8 +76,10 @@
                         </path>
                     </svg>
                 </a>
+
                 <i class="fas fa-cloud-sun" id="weather-icon"><span>24°</span></i>
-                <a href="#" class="location">Mexico City, MX</a>
+                <a href="#" class="location pl-2">Mexico City, MX &gt;</a>
+
             </div>
 
         </div>
@@ -89,7 +88,7 @@
     <main class="container-fluid p-0">
         <section class="d-flex flex-column section-card row no-gutters">
 
-            <h1 class="p-2 mb-0 mt-2 text-uppercase font-weight-bold h1-title d-flex align-items-end justify-content-start">
+            <h1 class="p-2 mb-0 mt-2 text-uppercase font-weight-bold h1-title d-flex align-items-end justify-content-start col-lg-7 order-lg-2">
                 Top Story
             </h1>
 
@@ -106,7 +105,7 @@
 
         <section class="d-flex flex-column section-card row no-gutters">
             <article class="pl-2 pr-2 card rounded-0">
-                <h1 class=" p-2 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start ">Featured Stories
+                <h1 class=" p-2 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start  col-lg-auto order-lg-1">Featured Stories
                 </h1>
                 <div>
                     <img src="images/img-featured-stories.jpg " alt="" class="top-story-img ">
@@ -119,7 +118,7 @@
 
         <section class="d-flex flex-column section-card row no-gutters ">
             <article class="pl-2 pr-2 card rounded-0">
-                <h1 class="p-2 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title ">
+                <h1 class="p-2 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title col-lg-auto order-lg-3">
                     Opinion
                 </h1>
                 <div class="opinion media border-bottom mb-0 ">
@@ -233,8 +232,6 @@
         </section>
     </main>
 
-    <script src=" https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity=" sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin=" anonymous ">
-    </script>
     <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity=" sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin=" anonymous ">
     </script>
     <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity=" sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin=" anonymous ">

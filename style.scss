@@ -63,6 +63,7 @@ body {
 
 main {
     background-color: #f4f5f6;
+    max-width: 1310px;
 }
 
 // header
@@ -71,10 +72,37 @@ main {
     position: sticky;
     top: 0;
     z-index: 99;
-}
-
-.none {
-    display: none !important;
+    color: $white;
+    font-family: $roboto;
+    max-width: 1310px;
+    .header-top {
+        height: 95px;
+        a:hover {
+            text-decoration: none;
+        }
+        .today {
+            font-family: $roboto;
+        }
+        .header-logo {
+            fill: $white;
+        }
+        .sign-in {
+            color: $white;
+        }
+    }
+    .header-bottom {
+        height: 56px;
+        background-color: $white;
+        color: black;
+        font-size: 19px;
+        a {
+            color: black;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $red;
+        }
+    }
 }
 
 .header {
@@ -82,18 +110,18 @@ main {
     height: 50px;
     margin: 0;
     padding: 0;
-    font: bold 14px $roboto;
+    font-family: $roboto;
+    font-size: 14px;
     a {
         color: $white;
     }
     position: sticky;
     top: 0;
     z-index: 99;
-}
-
-.header-logo {
-    width: 132px;
-    fill: $white;
+    .header-logo {
+        width: 132px;
+        fill: $white;
+    }
 }
 
 .white-box-red-font {
@@ -235,6 +263,10 @@ main {
     }
 }
 
+.location {
+    display: none;
+}
+
 .newsletter-logo {
     background-color: $red;
     width: 29px;
@@ -251,6 +283,7 @@ main {
         color: $white;
         span {
             font-family: $roboto;
+            font-size: 15px;
         }
     }
 }
@@ -270,7 +303,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
