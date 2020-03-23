@@ -52,17 +52,22 @@ html {
     outline: 0 none;
 }
 
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     font-size: 15px;
     line-height: 20px;
-    background-color: #f4f5f6;
+    background-color: #f4f5f6 !important;
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
 main {
-    background-color: #f4f5f6;
     max-width: 1310px;
 }
 
@@ -155,16 +160,6 @@ main {
 
 // main section
 // sticky-grid
-.section-card {
-    background-color: $white;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.top-story-img {
-    width: 100%;
-}
-
 .h1-title {
     color: #aaa;
     font-size: 16px;
@@ -190,9 +185,22 @@ main {
     font-weight: 400 !important;
 }
 
-.opinion {
+.section-font-style {
+    .media {
+        height: 90px;
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
     .media-body {
-        margin-top: 20px;
         h2,
         p {
             font-size: 17px;
@@ -210,32 +218,23 @@ main {
 #opinion-border-red {
     border-top: 3px solid $red;
     border-bottom: 3px double #aaa;
-    margin-bottom: -10px;
+    height: auto;
+    display: flex;
+    align-items: center;
 }
 
 #opinion-border-blue {
     border-top: 3px solid #1c87fb;
     border-bottom: 3px double #aaa;
-    margin-bottom: -10px;
-}
-
-.opinion-title {
-    margin-bottom: -20px;
+    height: auto;
+    display: flex;
+    align-items: center;
 }
 
 .opinion-author {
     text-transform: uppercase;
     font-size: 14px;
-    margin-top: 5px;
-    span {
-        font-weight: bold;
-    }
-}
-
-.opinion-author-2 {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 15px;
+    font-family: $roboto;
     span {
         font-weight: bold;
     }
@@ -271,6 +270,36 @@ main {
     background-color: $red;
     width: 29px;
     height: 28px;
+}
+
+.more-stories {
+    .media {
+        height: auto;
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
+    .media-body {
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
 }
 
 // 
