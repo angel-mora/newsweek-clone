@@ -1,0 +1,49 @@
+.featured-stories {
+    grid-area: featured-stories;
+}
+
+.top-story {
+    grid-area: top-story;
+}
+
+
+/* grid method to position layout lg */
+
+@media screen and (min-width: 1070px) {
+    .nw-container {
+        display: grid;
+        grid-template-columns: 3fr 4fr 3fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "featured-stories top-story opinion" "featured-stories culture-travel the debate" "featured-stories more-stories latest-news" "featured-stories more-stories sign-up";
+    }
+}
+
+
+/* grid method to position layout md */
+
+@media screen and (min-width: 768px) {
+    .nw-container {
+        display: grid;
+        grid-template-columns: 45fr 55fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: "featured-stories top-story" "featured-stories culture-travel" "featured-stories more-stories" "opinion opinion" "debate debate" "latest-news latest-news" "sign-up sign-up";
+    }
+}
+
+
+/* flexbox features for positioning */
+
+.example {
+    display: flex;
+    flex-direction: row column row-reverse column-reverse;
+    justify-content: flex-start flex-end center stretch;
+    align-items: flex-start flex-end center;
+}
+
+
+/* justify or align self are for container's inside elements*/
+
+.example-element {
+    justify-self: flex-start flex-end center stretch;
+    align-self: flex-start flex-end center;
+}
