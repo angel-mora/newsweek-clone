@@ -160,6 +160,70 @@ main {
 
 // main section
 // sticky-grid
+.multiple-heights {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-stories {
+    grid-area: featured-stories;
+}
+
+.top-story {
+    grid-area: top-story;
+    height: auto;
+}
+
+.opinion {
+    grid-area: opinion;
+}
+
+.culture-travel {
+    grid-area: culture-travel;
+}
+
+.more-stories {
+    grid-area: more-stories;
+}
+
+.debate {
+    grid-area: debate;
+}
+
+.latest-news {
+    grid-area: latest-news;
+}
+
+.sign-up {
+    grid-area: sign-up;
+}
+
+.img-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tag-box {
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $red;
+    font-family: $roboto;
+    position: absolute;
+    left: 0;
+    margin-top: -1.8rem;
+}
+
+.gray-tag-box {
+    height: 30px;
+    background-color: $#c2d4d7;
+    color: black;
+    font-family: arial;
+    position: absolute;
+    left: 0;
+    margin-top: -1.8rem;
+}
+
 .h1-title {
     color: #aaa;
     font-size: 16px;
@@ -212,6 +276,12 @@ main {
             text-transform: uppercase;
             color: $grey;
         }
+    }
+}
+
+.opinion {
+    .media {
+        height: auto;
     }
 }
 
@@ -302,42 +372,6 @@ main {
     }
 }
 
-.multiple-heights {
-    display: grid;
-}
-
-.featured-stories {
-    grid-area: featured-stories;
-}
-
-.top-story {
-    grid-area: top-story;
-}
-
-.opinion {
-    grid-area: opinion;
-}
-
-.culture-travel {
-    grid-area: culture-travel;
-}
-
-.more-stories {
-    grid-area: more-stories;
-}
-
-.debate {
-    grid-area: debate;
-}
-
-.latest-news {
-    grid-area: latest-news;
-}
-
-.sign-up {
-    grid-area: sign-up;
-}
-
 // 
 @media (min-width: 401px) {
     #weather-icon {
@@ -377,21 +411,30 @@ main {
     .multiple-heights {
         display: grid;
         grid-template-columns: 9fr 10fr;
-        grid-template-rows: repeat(7, 1fr);
+        grid-template-rows: repeat(7, auto);
         grid-template-areas: "featured-stories top-story""featured-stories culture-travel""featured-stories more-stories""opinion opinion""debate debate""latest-news latest-news""sign-up sign-up";
+    }
+    .featured-stories {
+        position: sticky;
+        top: 0;
+    }
+    .opinion {
+        .media {
+            min-height: 120px;
+        }
     }
 }
 
 // large size
 @media (min-width: 992px) {
     .multiple-heights {
+        padding: 10px;
+        margin-top: -10px;
+        background-color: $white;
         max-width: 1310px;
         display: grid;
-        grid-template-columns: 45fr 55fr;
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas: "featured-stories top-story""featured-stories culture-travel""featured-stories more-stories""opinion opinion""debate debate""latest-news latest-news""sign-up sign-up";
+        grid-template-columns: 3fr 4fr 3fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up"
     }
 }
-
-// extra large size
-@media (min-width: 1200px) {}
