@@ -3,11 +3,15 @@ $red:#f72210;
 $white: white;
 $pink: #fb9a94;
 $grey: #555;
+$light-grey: rgba(39, 39, 39, 0.5);
+$bg-gray: #f4f5f6;
 $roboto: 'Roboto Condensed',
 sans-serif;
 $arial: Arial,
 Helvetica,
 sans-serif;
+$lora: 'Lora',
+serif;
 // universal-setup
 html,
 body,
@@ -40,7 +44,7 @@ figure {
 
 html {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $arial, Helvetica, sans-serif;
 }
 
 *,
@@ -63,7 +67,7 @@ body {
     line-height: 20px;
     background-color: #f4f5f6 !important;
     color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
@@ -171,7 +175,7 @@ main {
 
 .top-story {
     grid-area: top-story;
-    height: auto;
+    max-height: 550px;
 }
 
 .opinion {
@@ -180,6 +184,9 @@ main {
 
 .culture-travel {
     grid-area: culture-travel;
+    .top-story-p {
+        color: $light-grey;
+    }
 }
 
 .more-stories {
@@ -192,10 +199,51 @@ main {
 
 .latest-news {
     grid-area: latest-news;
+    .media {
+        margin: 5px 0;
+        height: 105px;
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
+    .media-body {
+        h2,
+        p {
+            font-size: 17px;
+            font-family: $roboto;
+            font-weight: bolder;
+        }
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $grey;
+        }
+    }
 }
 
 .sign-up {
     grid-area: sign-up;
+    width: 100%;
+    justify-content: center;
+    .gray-box {
+        width: 300px;
+        height: 165px;
+        margin: 0 auto;
+        background-color: $bg-gray;
+        font-family: $roboto;
+        font-weight: bold;
+        h2 {
+            font-size: 19px;
+        }
+    }
 }
 
 .img-cover {
@@ -215,13 +263,15 @@ main {
 }
 
 .gray-tag-box {
-    height: 30px;
-    background-color: $#c2d4d7;
+    height: 20px;
+    background-color: #c2d4d7;
     color: black;
-    font-family: arial;
+    font-family: $arial;
+    font-size: 13px;
+    font-weight: 300;
     position: absolute;
     left: 0;
-    margin-top: -1.8rem;
+    margin-top: -1.25rem;
 }
 
 .h1-title {
@@ -230,10 +280,16 @@ main {
     font-family: $roboto;
 }
 
+// it would also be possible to change top-story-h2 name to make more generic
 .top-story-h2 {
     font-family: $roboto;
     font-size: 22px;
     font-weight: bolder;
+}
+
+.lora-h2 {
+    font-family: $lora;
+    font-size: 20px;
 }
 
 .top-story-p {
@@ -372,6 +428,23 @@ main {
     }
 }
 
+.multiple-grids {
+    background-color: $bg-gray;
+}
+
+.mg-category-item {
+    h2 {
+        font-size: 19px;
+        font-family: $roboto;
+    }
+}
+
+.mg-follow-item {
+    font-family: $roboto;
+    font-size: 16px;
+    color: $red;
+}
+
 // 
 @media (min-width: 401px) {
     #weather-icon {
@@ -411,7 +484,7 @@ main {
     .multiple-heights {
         display: grid;
         grid-template-columns: 9fr 10fr;
-        grid-template-rows: repeat(7, auto);
+        grid-template-rows: repeat(7, auto-fill);
         grid-template-areas: "featured-stories top-story""featured-stories culture-travel""featured-stories more-stories""opinion opinion""debate debate""latest-news latest-news""sign-up sign-up";
     }
     .featured-stories {
@@ -435,6 +508,10 @@ main {
         display: grid;
         grid-template-columns: 3fr 4fr 3fr;
         grid-template-rows: repeat(4, auto);
-        grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up"
+        grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up";
+    }
+    .featured-stories {
+        position: sticky;
+        top: 0;
     }
 }
