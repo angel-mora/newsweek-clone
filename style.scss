@@ -1,517 +1,540 @@
-// variables
-$red:#f72210;
-$white: white;
-$pink: #fb9a94;
-$grey: #555;
-$light-grey: rgba(39, 39, 39, 0.5);
-$bg-gray: #f4f5f6;
-$roboto: 'Roboto Condensed',
-sans-serif;
-$arial: Arial,
-Helvetica,
-sans-serif;
-$lora: 'Lora',
-serif;
-// universal-setup
-html,
-body,
-div,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-ol,
-ul,
-li,
-form,
-legend,
-label,
-table,
-header,
-footer,
-nav,
-section,
-figure {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    box-sizing: border-box;
-    font-family: $arial, Helvetica, sans-serif;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    list-style: none outside none;
-    border: 0 none;
-    outline: 0 none;
-}
-
-a,
-a:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-body {
-    font-size: 15px;
-    line-height: 20px;
-    background-color: #f4f5f6 !important;
-    color: #333;
-    font-family: $arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-main {
-    max-width: 1310px;
-}
-
-// header
-.big-header {
-    background-color: $red;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    color: $white;
-    font-family: $roboto;
-    max-width: 1310px;
-    .header-top {
-        height: 95px;
-        a:hover {
-            text-decoration: none;
+    // variables
+    $red:#f72210;
+    $white: white;
+    $pink: #fb9a94;
+    $grey: #555;
+    $light-grey: rgba(39, 39, 39, 0.5);
+    $bg-gray: #f4f5f6;
+    $roboto: 'Roboto Condensed',
+    sans-serif;
+    $arial: Arial,
+    Helvetica,
+    sans-serif;
+    $lora: 'Lora',
+    serif;
+    // universal-setup
+    html,
+    body,
+    div,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    ol,
+    ul,
+    li,
+    form,
+    legend,
+    label,
+    table,
+    header,
+    footer,
+    nav,
+    section,
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        box-sizing: border-box;
+        font-family: $arial, Helvetica, sans-serif;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        list-style: none outside none;
+        border: 0 none;
+        outline: 0 none;
+    }
+    
+    a,
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    body {
+        font-size: 15px;
+        line-height: 20px;
+        background-color: #f4f5f6 !important;
+        color: #333;
+        font-family: $arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+    }
+    
+    main {
+        max-width: 1310px;
+    }
+    
+    // header
+    .big-header {
+        background-color: $red;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        color: $white;
+        font-family: $roboto;
+        max-width: 1310px;
+        .header-top {
+            height: 95px;
+            a:hover {
+                text-decoration: none;
+            }
+            .today {
+                font-family: $roboto;
+            }
+            .header-logo {
+                fill: $white;
+            }
+            .sign-in {
+                color: $white;
+            }
         }
-        .today {
-            font-family: $roboto;
+        .header-bottom {
+            height: 56px;
+            background-color: $white;
+            color: black;
+            font-size: 19px;
+            a {
+                color: black;
+            }
+            a:hover {
+                text-decoration: none;
+                color: $red;
+            }
         }
-        .header-logo {
-            fill: $white;
-        }
-        .sign-in {
+    }
+    
+    .header {
+        background-color: $red;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        font-family: $roboto;
+        font-size: 14px;
+        a {
             color: $white;
         }
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        .header-logo {
+            width: 132px;
+            fill: $white;
+        }
     }
-    .header-bottom {
-        height: 56px;
+    
+    .white-box-red-font {
+        width: 71px;
+        height: 26px;
         background-color: $white;
-        color: black;
-        font-size: 19px;
-        a {
-            color: black;
-        }
-        a:hover {
-            text-decoration: none;
-            color: $red;
-        }
+        margin-left: 7px;
     }
-}
-
-.header {
-    background-color: $red;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    font-family: $roboto;
-    font-size: 14px;
-    a {
+    
+    .navbar {
+        width: 100%;
+    }
+    
+    .date {
         color: $white;
+        margin-left: 10px;
     }
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    .header-logo {
-        width: 132px;
-        fill: $white;
+    
+    #red {
+        color: $red;
     }
-}
-
-.white-box-red-font {
-    width: 71px;
-    height: 26px;
-    background-color: $white;
-    margin-left: 7px;
-}
-
-.navbar {
-    width: 100%;
-}
-
-.date {
-    color: $white;
-    margin-left: 10px;
-}
-
-#red {
-    color: $red;
-}
-
-#pink {
-    color: $pink;
-    margin-left: 7px;
-}
-
-#weather-icon {
-    display: none;
-}
-
-// main section
-// sticky-grid
-.multiple-heights {
-    display: flex;
-    flex-direction: column;
-}
-
-.featured-stories {
-    grid-area: featured-stories;
-}
-
-.top-story {
-    grid-area: top-story;
-    max-height: 550px;
-}
-
-.opinion {
-    grid-area: opinion;
-}
-
-.culture-travel {
-    grid-area: culture-travel;
-    .top-story-p {
-        color: $light-grey;
+    
+    #pink {
+        color: $pink;
+        margin-left: 7px;
     }
-}
-
-.more-stories {
-    grid-area: more-stories;
-}
-
-.debate {
-    grid-area: debate;
-}
-
-.latest-news {
-    grid-area: latest-news;
-    .media {
-        margin: 5px 0;
-        height: 105px;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-}
-
-.sign-up {
-    grid-area: sign-up;
-    width: 100%;
-    justify-content: center;
-    .gray-box {
-        width: 300px;
-        height: 165px;
-        margin: 0 auto;
-        background-color: $bg-gray;
-        font-family: $roboto;
-        font-weight: bold;
-        h2 {
-            font-size: 19px;
-        }
-    }
-}
-
-.img-cover {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.tag-box {
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: $red;
-    font-family: $roboto;
-    position: absolute;
-    left: 0;
-    margin-top: -1.8rem;
-}
-
-.gray-tag-box {
-    height: 20px;
-    background-color: #c2d4d7;
-    color: black;
-    font-family: $arial;
-    font-size: 13px;
-    font-weight: 300;
-    position: absolute;
-    left: 0;
-    margin-top: -1.25rem;
-}
-
-.h1-title {
-    color: #aaa;
-    font-size: 16px;
-    font-family: $roboto;
-}
-
-// it would also be possible to change top-story-h2 name to make more generic
-.top-story-h2 {
-    font-family: $roboto;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-.lora-h2 {
-    font-family: $lora;
-    font-size: 20px;
-}
-
-.top-story-p {
-    font-size: 13px;
-    margin-top: -1rem;
-}
-
-.description {
-    font-size: 13px;
-    margin-top: 5px;
-    font-family: $arial !important;
-    text-transform: none !important;
-    font-weight: 400 !important;
-}
-
-.section-font-style {
-    .media {
-        height: 90px;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-}
-
-.opinion {
-    .media {
-        height: auto;
-    }
-}
-
-#opinion-border-red {
-    border-top: 3px solid $red;
-    border-bottom: 3px double #aaa;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-
-#opinion-border-blue {
-    border-top: 3px solid #1c87fb;
-    border-bottom: 3px double #aaa;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-
-.opinion-author {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: $roboto;
-    span {
-        font-weight: bold;
-    }
-}
-
-.debate-author {
-    position: relative;
-    top: -15px;
-    right: 15px;
-    width: 67px;
-    height: 63px;
-}
-
-.vs {
-    span {
-        height: 45px;
-        width: 45px;
-        line-height: 30px;
-        border-radius: 30px;
-        background-color: black;
-        color: #d6d6d6;
-        text-align: center;
-        font-size: 1em;
-        font-family: $roboto;
-    }
-}
-
-.location {
-    display: none;
-}
-
-.newsletter-logo {
-    background-color: $red;
-    width: 29px;
-    height: 28px;
-}
-
-.more-stories {
-    .media {
-        height: auto;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $grey;
-        }
-    }
-}
-
-.multiple-grids {
-    background-color: $bg-gray;
-}
-
-.mg-category-item {
-    h2 {
-        font-size: 19px;
-        font-family: $roboto;
-    }
-}
-
-.mg-follow-item {
-    font-family: $roboto;
-    font-size: 16px;
-    color: $red;
-}
-
-// 
-@media (min-width: 401px) {
+    
     #weather-icon {
+        display: none;
+    }
+    
+    // main section
+    // sticky-grid
+    .multiple-heights {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .featured-stories {
+        grid-area: featured-stories;
+    }
+    
+    .top-story {
+        grid-area: top-story;
+        max-height: 550px;
+    }
+    
+    .opinion {
+        grid-area: opinion;
+    }
+    
+    .culture-travel {
+        grid-area: culture-travel;
+        .top-story-p {
+            color: $light-grey;
+        }
+    }
+    
+    .more-stories {
+        grid-area: more-stories;
+    }
+    
+    .debate {
+        grid-area: debate;
+    }
+    
+    .latest-news {
+        grid-area: latest-news;
+        .media {
+            margin: 5px 0;
+            height: 105px;
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+        .media-body {
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+    }
+    
+    .sign-up {
+        grid-area: sign-up;
+        width: 100%;
+        justify-content: center;
+        .gray-box {
+            width: 300px;
+            height: 165px;
+            margin: 0 auto;
+            background-color: $bg-gray;
+            font-family: $roboto;
+            font-weight: bold;
+            h2 {
+                font-size: 19px;
+            }
+        }
+    }
+    
+    .img-cover {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .tag-box {
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: $red;
+        font-family: $roboto;
+        position: absolute;
+        left: 0;
+        margin-top: -1.8rem;
+    }
+    
+    .gray-tag-box {
+        height: 20px;
+        background-color: #c2d4d7;
+        color: black;
+        font-family: $arial;
+        font-size: 13px;
+        font-weight: 300;
+        position: absolute;
+        left: 0;
+        margin-top: -1.25rem;
+    }
+    
+    .h1-title {
+        color: #aaa;
+        font-size: 16px;
+        font-family: $roboto;
+    }
+    
+    // it would also be possible to change top-story-h2 name to make more generic
+    .top-story-h2 {
+        font-family: $roboto;
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    
+    .lora-h2 {
+        font-family: $lora;
+        font-size: 20px;
+    }
+    
+    .top-story-p {
+        font-size: 13px;
+        margin-top: -1rem;
+    }
+    
+    .description {
+        font-size: 13px;
+        margin-top: 5px;
+        font-family: $arial !important;
+        text-transform: none !important;
+        font-weight: 400 !important;
+    }
+    
+    .section-font-style {
+        .media {
+            height: 90px;
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+        .media-body {
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+    }
+    
+    .opinion {
+        .media {
+            height: auto;
+        }
+    }
+    
+    #opinion-border-red {
+        border-top: 3px solid $red;
+        border-bottom: 3px double #aaa;
+        height: auto;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        margin-left: 25px;
-        color: $white;
+    }
+    
+    #opinion-border-blue {
+        border-top: 3px solid #1c87fb;
+        border-bottom: 3px double #aaa;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .opinion-author {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: $roboto;
         span {
+            font-weight: bold;
+        }
+    }
+    
+    .debate-author {
+        position: relative;
+        top: -15px;
+        right: 15px;
+        width: 67px;
+        height: 63px;
+    }
+    
+    .vs {
+        span {
+            height: 45px;
+            width: 45px;
+            line-height: 30px;
+            border-radius: 30px;
+            background-color: black;
+            color: #d6d6d6;
+            text-align: center;
+            font-size: 1em;
             font-family: $roboto;
+        }
+    }
+    
+    .location {
+        display: none;
+    }
+    
+    .newsletter-logo {
+        background-color: $red;
+        width: 29px;
+        height: 28px;
+    }
+    
+    .more-stories {
+        .media {
+            height: auto;
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+        .media-body {
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+    }
+    
+    .multiple-grids {}
+    
+    .mg-category-item {
+        h1 {
+            font-size: 19px;
+            font-family: $roboto;
+        }
+    }
+    
+    .mg-follow-item {
+        font-family: $roboto;
+        font-size: 16px;
+        color: $red;
+    }
+    
+    .slideshow-red-h2 {
+        font-family: $roboto;
+        font-size: 22px;
+        color: $red;
+    }
+    
+    .btn-white-bg-red {
+        background-color: $red;
+        font-family: $roboto;
+        font-size: 15px;
+        color: $white;
+    }
+    
+    .btn-red-bg-white {
+        background-color: $white;
+        font-family: $roboto;
+        font-size: 15px;
+        color: $red;
+    }
+    
+    .magazine-h2 {
+        font-size: 16px;
+        font-family: $roboto;
+    }
+    
+    // 
+    @media (min-width: 401px) {
+        #weather-icon {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 25px;
+            color: $white;
+            span {
+                font-family: $roboto;
+                font-size: 15px;
+            }
+        }
+    }
+    
+    @media (min-width: 481px) {
+        .sign-in {
+            font-size: 18px;
+        }
+        .white-box-red-font {
+            font-size: 18px;
+            width: 130px;
+        }
+    }
+    
+    @media (min-width: 641px) {
+        .location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 15px;
         }
     }
-}
-
-@media (min-width: 481px) {
-    .sign-in {
-        font-size: 18px;
-    }
-    .white-box-red-font {
-        font-size: 18px;
-        width: 130px;
-    }
-}
-
-@media (min-width: 641px) {
-    .location {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-    }
-}
-
-// medium size
-@media (min-width: 768px) {
-    .multiple-heights {
-        display: grid;
-        grid-template-columns: 9fr 10fr;
-        grid-template-rows: repeat(7, auto-fill);
-        grid-template-areas: "featured-stories top-story""featured-stories culture-travel""featured-stories more-stories""opinion opinion""debate debate""latest-news latest-news""sign-up sign-up";
-    }
-    .featured-stories {
-        position: sticky;
-        top: 0;
-    }
-    .opinion {
-        .media {
-            min-height: 120px;
+    
+    // medium size
+    @media (min-width: 768px) {
+        .multiple-heights {
+            display: grid;
+            grid-template-columns: 9fr 10fr;
+            grid-template-rows: repeat(7, auto-fill);
+            grid-template-areas: "featured-stories top-story""featured-stories culture-travel""featured-stories more-stories""opinion opinion""debate debate""latest-news latest-news""sign-up sign-up";
+        }
+        .featured-stories {
+            position: sticky;
+            top: 0;
+        }
+        .opinion {
+            .media {
+                min-height: 120px;
+            }
         }
     }
-}
-
-// large size
-@media (min-width: 992px) {
-    .multiple-heights {
-        padding: 10px;
-        margin-top: -10px;
-        background-color: $white;
-        max-width: 1310px;
-        display: grid;
-        grid-template-columns: 3fr 4fr 3fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up";
+    
+    // large size
+    @media (min-width: 992px) {
+        .multiple-heights {
+            padding: 10px;
+            margin-top: -10px;
+            background-color: $white;
+            max-width: 1310px;
+            display: grid;
+            grid-template-columns: 3fr 4fr 3fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up";
+        }
+        .featured-stories {
+            position: sticky;
+            top: 0;
+        }
     }
-    .featured-stories {
-        position: sticky;
-        top: 0;
-    }
-}
