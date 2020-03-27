@@ -567,6 +567,28 @@ main {
   color: #555;
 }
 
+.footer {
+  background-color: white;
+}
+
+.footer .logo {
+  width: 236px;
+  height: 36px;
+  fill: #f72210;
+}
+
+.footer .copyright {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: gray;
+}
+
+.footer .fab {
+  color: #555;
+  width: 26px;
+  height: 26px;
+}
+
 @media (min-width: 401px) {
   #weather-icon {
     display: -webkit-box;
