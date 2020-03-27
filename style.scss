@@ -276,9 +276,17 @@
         }
         button {
             background-color: $red;
+            margin: 0 auto;
         }
         p {
             font-family: $arial;
+        }
+        .media-body {
+            width: 100%;
+        }
+        .newsletter-img {
+            display: flex;
+            height: 160px;
         }
     }
     
@@ -584,6 +592,22 @@
             .media {
                 min-height: 120px;
             }
+        }
+        .newsletter {
+            .media-body {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                p,
+                button {
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+        }
+        .newsletter-img {
+            width: 191px;
+            height: 301px !important;
         }
     }
     

@@ -296,10 +296,22 @@ main {
 
 .newsletter button {
   background-color: #f72210;
+  margin: 0 auto;
 }
 
 .newsletter p {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsletter .media-body {
+  width: 100%;
+}
+
+.newsletter .newsletter-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 160px;
 }
 
 .img-cover {
@@ -617,6 +629,30 @@ main {
   }
   .opinion .media {
     min-height: 120px;
+  }
+  .newsletter .media-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .newsletter .media-body p,
+  .newsletter .media-body button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .newsletter-img {
+    width: 191px;
+    height: 301px !important;
   }
 }
 
