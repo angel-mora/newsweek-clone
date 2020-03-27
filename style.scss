@@ -246,6 +246,42 @@
         }
     }
     
+    .subscribe {
+        justify-content: center;
+        .gray-box {
+            margin: 0 auto;
+            background-color: $bg-gray;
+            font-family: $roboto;
+            h2 {
+                font-size: 19px;
+                font-weight: bold;
+            }
+            button {
+                background-color: $red;
+            }
+            p {
+                font-family: $arial;
+            }
+        }
+    }
+    
+    .newsletter {
+        justify-content: center;
+        margin: 0 auto;
+        background-color: $bg-gray;
+        font-family: $roboto;
+        h2 {
+            font-size: 19px;
+            font-weight: bold;
+        }
+        button {
+            background-color: $red;
+        }
+        p {
+            font-family: $arial;
+        }
+    }
+    
     .img-cover {
         width: 100%;
         height: auto;
@@ -466,6 +502,36 @@
     .magazine-h2 {
         font-size: 16px;
         font-family: $roboto;
+    }
+    
+    .slideshow-font-style {
+        .media {
+            height: 115px;
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
+        .media-body {
+            h2,
+            p {
+                font-size: 17px;
+                font-family: $roboto;
+                font-weight: bolder;
+            }
+            p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $grey;
+            }
+        }
     }
     
     // 
