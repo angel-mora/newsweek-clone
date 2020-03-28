@@ -2,8 +2,8 @@
 $red:#f72210;
 $white: white;
 $pink: #fb9a94;
-$grey: #555;
-$light-grey: rgba(39, 39, 39, 0.5);
+$gray: #555;
+$light-gray: rgba(39, 39, 39, 0.5);
 $bg-gray: #f4f5f6;
 $roboto: 'Roboto Condensed',
 sans-serif;
@@ -185,7 +185,7 @@ main {
 .culture-travel {
     grid-area: culture-travel;
     .top-story-p {
-        color: $light-grey;
+        color: $light-gray;
     }
 }
 
@@ -211,7 +211,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
     .media-body {
@@ -224,7 +224,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
 }
@@ -249,6 +249,7 @@ main {
 .subscribe {
     justify-content: center;
     .gray-box {
+        width: 100%;
         margin: 0 auto;
         background-color: $bg-gray;
         font-family: $roboto;
@@ -258,11 +259,18 @@ main {
         }
         button {
             background-color: $red;
+            margin: 0 auto;
         }
         p {
             font-family: $arial;
         }
     }
+}
+
+.subscribe-overlap {
+    width: 170px;
+    height: 227px;
+    margin: 0 auto;
 }
 
 .newsletter {
@@ -361,7 +369,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
     .media-body {
@@ -374,7 +382,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
 }
@@ -454,7 +462,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
     .media-body {
@@ -467,7 +475,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
 }
@@ -522,7 +530,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
     .media-body {
@@ -535,7 +543,7 @@ main {
         p {
             font-size: 14px;
             text-transform: uppercase;
-            color: $grey;
+            color: $gray;
         }
     }
 }
@@ -625,16 +633,21 @@ main {
             display: flex;
             justify-content: start;
             align-items: start;
-            p,
-            button {
+            p {
                 display: flex;
                 justify-content: start;
             }
         }
+        .newsletter-img {
+            width: 191px;
+            height: 190px;
+        }
+        button {
+            margin: 0;
+        }
     }
-    .newsletter-img {
-        width: 191px;
-        height: 301px !important;
+    #subscribe-btn {
+        margin-left: 1rem !important;
     }
 }
 
@@ -653,5 +666,9 @@ main {
     .featured-stories {
         position: sticky;
         top: 0;
+    }
+    .newsletter-img {
+        width: 191px;
+        height: 301px !important;
     }
 }

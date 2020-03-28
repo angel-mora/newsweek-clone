@@ -262,6 +262,7 @@ main {
 }
 
 .subscribe .gray-box {
+  width: 100%;
   margin: 0 auto;
   background-color: #f4f5f6;
   font-family: "Roboto Condensed", sans-serif;
@@ -274,10 +275,17 @@ main {
 
 .subscribe .gray-box button {
   background-color: #f72210;
+  margin: 0 auto;
 }
 
 .subscribe .gray-box p {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.subscribe-overlap {
+  width: 170px;
+  height: 227px;
+  margin: 0 auto;
 }
 
 .newsletter {
@@ -569,6 +577,7 @@ main {
 
 .footer {
   background-color: white;
+  color: #555;
 }
 
 .footer .logo {
@@ -580,13 +589,25 @@ main {
 .footer .copyright {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: gray;
 }
 
 .footer .fab {
-  color: #555;
   width: 26px;
   height: 26px;
+}
+
+.footer .editions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.footer .editions h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.footer .editions a {
+  text-decoration: none;
 }
 
 @media (min-width: 401px) {
@@ -663,8 +684,7 @@ main {
         -ms-flex-align: start;
             align-items: start;
   }
-  .newsletter .media-body p,
-  .newsletter .media-body button {
+  .newsletter .media-body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -672,9 +692,15 @@ main {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  .newsletter-img {
+  .newsletter .newsletter-img {
     width: 191px;
-    height: 301px !important;
+    height: 190px;
+  }
+  .newsletter button {
+    margin: 0;
+  }
+  #subscribe-btn {
+    margin-left: 1rem !important;
   }
 }
 
@@ -696,6 +722,10 @@ main {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+  .newsletter-img {
+    width: 191px;
+    height: 301px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
