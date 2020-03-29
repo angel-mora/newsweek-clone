@@ -591,23 +591,31 @@ main {
   font-size: 12px;
 }
 
-.footer .fab {
-  width: 26px;
-  height: 26px;
-}
-
 .footer .editions {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .footer .editions h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .footer .editions a {
   text-decoration: none;
+  color: #555;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .editions span {
+  display: none;
 }
 
 @media (min-width: 401px) {
@@ -701,6 +709,12 @@ main {
   }
   #subscribe-btn {
     margin-left: 1rem !important;
+  }
+  .footer-copy-rrss {
+    border-bottom: none !important;
+  }
+  .editions span {
+    display: inline !important;
   }
 }
 

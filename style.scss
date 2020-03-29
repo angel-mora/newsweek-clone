@@ -560,19 +560,22 @@ main {
         font-family: $arial;
         font-size: 12px;
     }
-    .fab {
-        width: 26px;
-        height: 26px;
-    }
     .editions {
         font-family: $arial;
-        font-size: 12px;
+        font-size: 14px;
         h3 {
-            font-family: $arial;
-            font-size: 12px;
+            font-size: 14px;
         }
         a {
             text-decoration: none;
+            color: $gray;
+            padding-right: 1rem;
+            padding-bottom: 0.5rem;
+            display: flex;
+            flex-direction: row;
+        }
+        span {
+            display: none;
         }
     }
 }
@@ -648,6 +651,14 @@ main {
     }
     #subscribe-btn {
         margin-left: 1rem !important;
+    }
+    .footer-copy-rrss {
+        border-bottom: none !important;
+    }
+    .editions {
+        span {
+            display: inline !important;
+        }
     }
 }
 
