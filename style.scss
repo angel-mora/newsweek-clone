@@ -140,26 +140,36 @@ main {
     margin-left: 7px;
 }
 
-.navbar {
-    width: 100%;
+.invisible {
+    display: block;
 }
 
-.date {
-    color: $white;
-    margin-left: 10px;
+.navbar {
+    width: 100%;
+    span {
+        font-weight: normal;
+        color: $light-gray;
+    }
+    input {
+        width: 65px;
+        font-family: $arial;
+        color: $light-gray;
+    }
+    .date {
+        color: $white;
+        margin-left: 10px;
+    }
+    #pink {
+        color: $pink;
+        margin-left: 7px;
+    }
+    #weather-icon {
+        display: none;
+    }
 }
 
 #red {
     color: $red;
-}
-
-#pink {
-    color: $pink;
-    margin-left: 7px;
-}
-
-#weather-icon {
-    display: none;
 }
 
 // main section
@@ -671,13 +681,37 @@ main {
         max-width: 1310px;
         display: grid;
         grid-template-columns: 3fr 4fr 3fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "featured-stories top-story opinion""featured-stories culture-travel debate""featured-stories more-stories latest-news""featured-stories more-stories sign-up";
+        // grid-template-rows: 1710px 2767px 1669px;
+        grid-template-rows: repeat(7, auto);
+        // grid-template-areas: "featured-stories top-story opinion"". culture-travel debate"". more-stories latest-news"". more-stories sign-up";
+        grid-template-areas: "featured-stories top-story opinion"". culture-travel debate"". more-stories latest-news"". more-stories sign-up"". more-stories ."". more-stories ."". more-stories .";
     }
+    // // .middle-column {
+    // //     grid-area: middle-column;
+    // //     display: grid;
+    // //     grid-template-columns: 1fr;
+    // //     grid-template-rows: repeat(4, auto);
+    // //     grid-template-areas: "opinion""debate""latest-news""sign-up";
+    // // }
     .featured-stories {
-        position: sticky;
-        top: 0;
+        grid-area: featured-stories;
     }
+    // .opinion {
+    //     grid-area: opinion;
+    //     /* Position of the navigation section */
+    //     position: sticky;
+    //     /* Ensuring its attached to the top of the page */
+    //     top: 0;
+    //     /* Ensuring the height of to equal to the viewport's height */
+    // }
+    // .debate {
+    //     grid-area: debate;
+    //     /* Position of the navigation section */
+    //     position: sticky;
+    //     /* Ensuring its attached to the top of the page */
+    //     top: 0;
+    //     /* Ensuring the height of to equal to the viewport's height */
+    // }
     .newsletter-img {
         width: 191px;
         height: 301px !important;

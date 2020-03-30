@@ -43,18 +43,21 @@
         </div>
         <div class="row font-weight-bold header-bottom">
             <nav class="navbar">
-                <a href="#">U.S.</a>
-                <a href="#">World</a>
-                <a href="#">Business</a>
-                <a href="#">Tech & Science</a>
-                <a href="#">Culture</a>
-                <a href="#">Newsgeek</a>
-                <a href="#">Sports</a>
-                <a href="#">Health</a>
-                <a href="#">The Debate</a>
-                <a href="#">Vantage</a>
-                <a href="#">Weather</a>
-                <a href="#">Search</a>
+                <a href="#">U.S.<span class="pl-2 tag">|</span></a>
+                <a href="#">World<span class="pl-2 tag">|</span></a>
+                <a href="#">Business<span class="pl-2 tag">|</span></a>
+                <a href="#">Tech & Science<span class="pl-2 tag">|</span></a>
+                <a href="#">Culture<span class="pl-2 tag">|</span></a>
+                <a href="#">Newsgeek<span class="pl-2 tag">|</span></a>
+                <a href="#">Sports<span class="pl-2 tag">|</span></a>
+                <a href="#">Health<span class="pl-2 tag">|</span></a>
+                <a href="#">The Debate<span class="pl-2 tag">|</span></a>
+                <a href="#">Vantage<span class="pl-2 tag">|</span></a>
+                <a href="#" class="pl-2">Weather</a>
+                <div class="d-flex justify-content-start">
+                    <input type="text" placeholder="Search"><i class="fas fa-search pt-1"></i>
+                </div>
+                <a href="#" class="invisible pl-2">Weather</a>
             </nav>
         </div>
     </header>
@@ -67,7 +70,7 @@
                 <a href="#" class="d-flex align-items-center justify-content-center sign-in">SIGN IN</a>
                 <a href="#" class="white-box-red-font d-flex align-items-center justify-content-center" id="red">SUBSCRIBE</a>
                 <a href="#" class="d-flex align-items-center justify-content-center" id="pink">
-                    <i class="fas fa-bars fa-2x d-lg-none"></i>
+                    <i class="fas fa-bars fa-2x"></i>
                 </a>
             </div>
             <div class="d-flex flex-row order-1">
@@ -90,7 +93,7 @@
 
     <main class="container-fluid p-0">
         <div class="multiple-heights">
-            <section class="p-2 top-story d-flex flex-column card rounded-0 no-gutters border-0 mb-3 mb-md-0 pb-lg-0 mb-lg-0">
+            <section class="p-2 top-story d-flex flex-column rounded-0 no-gutters border-0 mb-3 mb-md-0 pb-lg-0 mb-lg-0">
                 <h1 class="mb-2 mt-3 text-uppercase font-weight-bold h1-title d-flex align-items-start justify-content-start">
                     Top Story
                 </h1>
@@ -109,12 +112,12 @@
                 </article>
             </section>
 
-            <section class="p-2 featured-stories d-flex flex-column no-gutters card border-0 mb-3 mb-md-0">
+            <section class="p-2 featured-stories d-flex flex-column no-gutters border-0 mb-3 mb-md-0">
                 <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-start justify-content-start">
                     Featured Stories
                 </h1>
                 <article class="card rounded-0 border-0">
-                    <div class="card border-0">
+                    <div class="card border-0 pt-2">
                         <a href="#" class="fig-container">
                             <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
                             <div class="tag-box pt-1 pb-1 pl-2 pr-2">
@@ -160,7 +163,7 @@
 
             </section>
 
-            <section class="p-2 opinion section-font-style d-flex flex-column no-gutters card border-0 mb-3 mb-md-0">
+            <section class="p-2 opinion section-font-style d-flex flex-column no-gutters border-0 mb-3 mb-md-0">
                 <h1 class="mb-0 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
                     Opinion
                 </h1>
@@ -196,7 +199,7 @@
                 </article>
             </section>
 
-            <section class="p-2 debate card d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
+            <section class="p-2 debate d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
                 <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
                     The Debate
                 </h1>
@@ -227,7 +230,7 @@
                 </article>
             </section>
 
-            <section class="p-2 more-stories card d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
+            <section class="p-2 more-stories d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
                 <h1 class="h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title pt-3 mb-1">
                     More stories
                 </h1>
@@ -316,7 +319,7 @@
                 </article>
             </section>
 
-            <section class="p-2 culture-travel card section-font-style border-0 mb-3 mb-md-0">
+            <section class="p-2 culture-travel section-font-style border-0 mb-3 mb-md-0">
                 <h1 class="pl-md-2 pt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-2">
                     Culture & Travel
                 </h1>
@@ -366,7 +369,7 @@
                 </div>
             </section>
 
-            <section class="p-2 latest-news card border-0 mb-3 mb-md-0">
+            <section class="p-2 latest-news border-0 mb-3 mb-md-0">
                 <h1 class="h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-2">
                     Latest News
                 </h1>
@@ -406,7 +409,7 @@
                 </article>
             </section>
 
-            <section class="sign-up card border-0 mb-3 pt-4 mb-md-0 d-flex justify-content-center">
+            <section class="sign-up border-0 mb-3 pt-4 mb-md-0 d-flex justify-content-center">
                 <div class="gray-box p-3 d-flex flex-column align-items-start justify-content-center border">
                     <div class="d-flex align-items-center mt-3">
                         <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mr-2 mb-2">
@@ -417,6 +420,133 @@
                     <p class="mt-2">Update your preferences</p>
                 </div>
             </section>
+
+            <!-- comment 
+            <div class="middle-column d-none">
+                
+                <section class="p-2 opinion section-font-style d-flex flex-column no-gutters border-0 mb-3 mb-md-0">
+                    <h1 class="mb-0 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
+                        Opinion
+                    </h1>
+                    <article class="pl-2 pr-2 card rounded-0 border-0">
+                        <div class="media border-bottom mb-0">
+                            <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                            <div class="media-body p-2">
+                                <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                </h2>
+                                <p class="opinion-au">By Nigel Farage</p>
+                            </div>
+                        </div>
+                        <div class="media border-bottom mb-0">
+                            <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                            <div class="media-body p-2">
+                                <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                </h2>
+                                <p class="opinion-author">By Nigel Farage</p>
+                            </div>
+                        </div>
+                        <div class="media border-bottom mb-0">
+                            <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                            <div class="media-body p-2">
+                                <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                </h2>
+                                <p class="opinion-author">By Nigel Farage</p>
+                            </div>
+                        </div>
+                        <div class="media mt-1 mb-0">
+                            <img src="images/opinion.png " alt=" " class="pr-1 align-self-center">
+                            <div class="media-body p-2">
+                                <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                </h2>
+                                <p class="opinion-author">By Nigel Farage</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="p-2 debate d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
+                    <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
+                        The Debate
+                    </h1>
+                    <article class="card rounded-0 border-0 section-font-style p-2">
+                        <div class="media mb-0 mr-2" id="opinion-border-red">
+                            <img src="images/img-the-debate.jpg" alt="" class="pr-1 align-self-center mb-3">
+                            <div class="media-body p-2">
+                                <h2>Protecting Us All From an Epidemic Should Be Prioritized Over the Economy</h2>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="opinion-author pt-2">By <span>Nigel Farage</span></p>
+                            <img src="images/opinion.png" alt="" class="pr-1 align-self-center debate-author">
+                        </div>
+                        <div class="vs d-flex justify-content-center align-items-center">
+                            <span class="d-flex justify-content-center align-items-center">VS</span>
+                        </div>
+                        <div class="media mt-4 mr-2" id="opinion-border-blue">
+                            <img src="images/img-the-debate-2.jpg" alt="" class="pr-1 align-self-center mb-3">
+                            <div class="media-body p-2">
+                                <h2>In This Fight Against Coronavirus, We Need to Protect Both Lives and Livelihoods
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="opinion-author pt-2">By <span>Asad Hamir</span></p>
+                            <img src="images/img-the-debate-author2.png" alt="" class="pr-1 align-self-center debate-author">
+                        </div>
+                    </article>
+                </section>
+                <section class="d-lg-none p-2 latest-news border-0 mb-3 mb-md-0">
+                    <h1 class="h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-2">
+                        Latest News
+                    </h1>
+                    <article class="media border-bottom">
+                        <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                        <div class="media-body">
+                            <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                        </div>
+                    </article>
+
+                    <article class="media border-bottom">
+                        <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                        <div class="media-body">
+                            <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                        </div>
+                    </article>
+
+                    <article class="media border-bottom">
+                        <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                        <div class="media-body">
+                            <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                        </div>
+                    </article>
+
+                    <article class="media border-bottom">
+                        <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                        <div class="media-body">
+                            <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                        </div>
+                    </article>
+
+                    <article class="media border-bottom">
+                        <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                        <div class="media-body">
+                            <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                        </div>
+                    </article>
+                </section>
+                <section class="d-lg-none sign-up card border-0 mb-3 pt-4 mb-md-0 d-flex justify-content-center">
+                    <div class="gray-box p-3 d-flex flex-column align-items-start justify-content-center border">
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mr-2 mb-2">
+                            <h2 class=" text-uppercase font-weight-bold">Sign Up for our Newsletter</h2>
+                        </div>
+                        <button type="button" class="btn btn-md pt-1 pb-1 btn-secondary btn-lg font-weight-bold rounded-0">SIGN
+                            UP</button>
+                        <p class="mt-2">Update your preferences</p>
+                    </div>
+                </section>
+                -->
+        </div>
+
         </div>
 
         <div class="multiple-grids d-flex flex-column">
@@ -428,7 +558,7 @@
                 </div>
                 <div class="row no-gutters p-2 border-bottom mt-3">
 
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -440,7 +570,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -452,7 +582,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -464,7 +594,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -477,7 +607,7 @@
                         </h2>
                     </article>
 
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -489,7 +619,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -501,7 +631,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -513,7 +643,7 @@
                             Is Bernie Sanders Right About Medicare For All?
                         </h2>
                     </article>
-                    <article class="card border-0 col-md-3">
+                    <article class="p-2 card border-0 col-md-3">
                         <a href="#">
                             <img src="images/magazine-img.jpg" alt="" class="img-cover">
                         </a>
@@ -534,7 +664,7 @@
                     <h1 class=" text-uppercase font-weight-bold">Editor's Pick</h1>
                 </div>
                 <div class="row no-gutters">
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -547,7 +677,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -560,7 +690,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -573,7 +703,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -586,7 +716,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -599,7 +729,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -612,7 +742,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -625,7 +755,7 @@
                             <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
                         </div>
                     </article>
-                    <article class="card col-md-6 col-lg-3 border-0 pt-3">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
@@ -648,7 +778,7 @@
                 </div>
 
                 <div class="row no-gutters border-bottom">
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-img.jpg" alt="" class="img-cover">
@@ -660,7 +790,7 @@
                         </div>
                     </article>
 
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-img.jpg" alt="" class="img-cover">
@@ -672,7 +802,7 @@
                         </div>
                     </article>
 
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-img.jpg" alt="" class="img-cover">
@@ -689,7 +819,7 @@
                     U.S.
                 </h2>
                 <div class="row no-gutters">
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -698,7 +828,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -707,7 +837,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
                         <article class="media border-bottom pt-2">
                             <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
                             <div class="media-body">
@@ -734,7 +864,7 @@
                     World
                 </h2>
                 <div class="row no-gutters">
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -743,7 +873,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -752,7 +882,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
                         <article class="media border-bottom pt-2">
                             <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
                             <div class="media-body">
@@ -779,7 +909,7 @@
                     Business
                 </h2>
                 <div class="row no-gutters">
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -788,7 +918,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -797,7 +927,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
                         <article class="media border-bottom pt-2">
                             <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
                             <div class="media-body">
@@ -824,7 +954,7 @@
                     Tech & Cience
                 </h2>
                 <div class="row no-gutters">
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -833,7 +963,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card col-md-4 border-0 pt-3">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
                         <div class="card border-0">
                             <a href="#" class="fig-container">
                                 <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
@@ -842,7 +972,7 @@
                             <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
                         </div>
                     </article>
-                    <article class="card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
                         <article class="media border-bottom pt-2">
                             <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
                             <div class="media-body">
