@@ -31,6 +31,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 *,
@@ -119,7 +120,7 @@ main {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 999;
 }
 
 .header a {
@@ -136,10 +137,6 @@ main {
   height: 26px;
   background-color: white;
   margin-left: 7px;
-}
-
-.invisible {
-  display: block;
 }
 
 .navbar {
@@ -597,6 +594,13 @@ main {
   display: none;
 }
 
+.sticky-tops {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  z-index: 0;
+}
+
 @media (min-width: 401px) {
   #weather-icon {
     display: -webkit-box;
@@ -687,11 +691,6 @@ main {
   .newsletter-img {
     width: 191px;
     height: 301px !important;
-  }
-  .sticky-top {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */

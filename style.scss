@@ -45,6 +45,7 @@ figure {
 html {
     box-sizing: border-box;
     font-family: $arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 *,
@@ -126,7 +127,7 @@ main {
     }
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 999;
     .header-logo {
         width: 132px;
         fill: $white;
@@ -138,10 +139,6 @@ main {
     height: 26px;
     background-color: $white;
     margin-left: 7px;
-}
-
-.invisible {
-    display: block;
 }
 
 .navbar {
@@ -173,40 +170,17 @@ main {
 }
 
 // main section
-// sticky-grid
-// .multiple-heights { display: flex;
-// flex-direction: column;
-// }
-.featured-stories {
-    // grid-area: featured-stories;
-}
-
 .top-story {
-    // grid-area: top-story;
     max-height: 550px;
 }
 
-.opinion {
-    // grid-area: opinion;
-}
-
 .culture-travel {
-    // grid-area: culture-travel;
     .top-story-p {
         color: $light-gray;
     }
 }
 
-.more-stories {
-    // grid-area: more-stories;
-}
-
-.debate {
-    // grid-area: debate;
-}
-
 .latest-news {
-    // grid-area: latest-news;
     .media {
         margin: 5px 0;
         height: 105px;
@@ -238,7 +212,6 @@ main {
 }
 
 .sign-up {
-    // grid-area: sign-up;
     width: 100%;
     justify-content: center;
     .gray-box {
@@ -340,7 +313,6 @@ main {
     font-family: $roboto;
 }
 
-// it would also be possible to change top-story-h2 name to make more generic
 .top-story-h2 {
     font-family: $roboto;
     font-size: 22px;
@@ -588,7 +560,12 @@ main {
     }
 }
 
-// 
+.sticky-tops {
+    position: sticky;
+    top: 70px;
+    z-index: 0;
+}
+
 @media (min-width: 401px) {
     #weather-icon {
         display: flex;
@@ -662,47 +639,8 @@ main {
 
 // large size
 @media (min-width: 992px) {
-    //     padding: 10px;
-    //     margin-top: -10px;
-    //     background-color: $white;
-    //     max-width: 1310px;
-    //     display: grid;
-    //     grid-template-columns: 3fr 4fr 3fr;
-    //     // grid-template-rows: 1710px 2767px 1669px;
-    //     grid-template-rows: repeat(7, auto);
-    // grid-template-areas: "featured-stories top-story opinion"". culture-travel debate"". more-stories latest-news"". more-stories sign-up";
-    // // .middle-column {
-    // //     grid-area: middle-column;
-    // //     display: grid;
-    // //     grid-template-columns: 1fr;
-    // //     grid-template-rows: repeat(4, auto);
-    // //     grid-template-areas: "opinion""debate""latest-news""sign-up";
-    // // }
-    // .featured-stories {
-    //     grid-area: featured-stories;
-    // }
-    // .opinion {
-    //     grid-area: opinion;
-    //     /* Position of the navigation section */
-    //     position: sticky;
-    //     /* Ensuring its attached to the top of the page */
-    //     top: 0;
-    //     /* Ensuring the height of to equal to the viewport's height */
-    // }
-    // .debate {
-    //     grid-area: debate;
-    //     /* Position of the navigation section */
-    //     position: sticky;
-    //     /* Ensuring its attached to the top of the page */
-    //     top: 0;
-    //     /* Ensuring the height of to equal to the viewport's height */
-    // }
     .newsletter-img {
         width: 191px;
         height: 301px !important;
-    }
-    .sticky-top {
-        position: sticky;
-        top: 70px;
     }
 }
