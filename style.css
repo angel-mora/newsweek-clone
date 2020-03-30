@@ -175,47 +175,12 @@ main {
   color: #f72210;
 }
 
-.multiple-heights {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.featured-stories {
-  grid-area: featured-stories;
-}
-
 .top-story {
-  grid-area: top-story;
   max-height: 550px;
-}
-
-.opinion {
-  grid-area: opinion;
-}
-
-.culture-travel {
-  grid-area: culture-travel;
 }
 
 .culture-travel .top-story-p {
   color: rgba(39, 39, 39, 0.5);
-}
-
-.more-stories {
-  grid-area: more-stories;
-}
-
-.debate {
-  grid-area: debate;
-}
-
-.latest-news {
-  grid-area: latest-news;
 }
 
 .latest-news .media {
@@ -250,7 +215,6 @@ main {
 }
 
 .sign-up {
-  grid-area: sign-up;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -679,20 +643,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  .multiple-heights {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 9fr 10fr;
-        grid-template-columns: 9fr 10fr;
-    -ms-grid-rows: (auto-fill)[7];
-        grid-template-rows: repeat(7, auto-fill);
-        grid-template-areas: "featured-stories top-story" "featured-stories culture-travel" "featured-stories more-stories" "opinion opinion" "debate debate" "latest-news latest-news" "sign-up sign-up";
-  }
-  .featured-stories {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
   .opinion .media {
     min-height: 120px;
   }
@@ -734,27 +684,14 @@ main {
 }
 
 @media (min-width: 992px) {
-  .multiple-heights {
-    padding: 10px;
-    margin-top: -10px;
-    background-color: white;
-    max-width: 1310px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 3fr 4fr 3fr;
-        grid-template-columns: 3fr 4fr 3fr;
-    -ms-grid-rows: (auto)[7];
-        grid-template-rows: repeat(7, auto);
-        grid-template-areas: "featured-stories top-story opinion" ". culture-travel debate" ". more-stories latest-news" ". more-stories sign-up" ". more-stories ." ". more-stories ." ". more-stories .";
-  }
-  .featured-stories {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: featured-stories;
-  }
   .newsletter-img {
     width: 191px;
     height: 301px !important;
+  }
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
