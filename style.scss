@@ -116,6 +116,9 @@ main {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
     background-color: $red;
     height: 50px;
     margin: 0;
@@ -125,9 +128,6 @@ main {
     a {
         color: $white;
     }
-    position: sticky;
-    top: 0;
-    z-index: 999;
     .header-logo {
         width: 132px;
         fill: $white;
@@ -642,5 +642,8 @@ main {
     .newsletter-img {
         width: 191px;
         height: 301px !important;
+    }
+    main {
+        background-color: $white;
     }
 }

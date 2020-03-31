@@ -111,16 +111,16 @@ main {
 }
 
 .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
   background-color: #f72210;
   height: 50px;
   margin: 0;
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .header a {
@@ -691,6 +691,9 @@ main {
   .newsletter-img {
     width: 191px;
     height: 301px !important;
+  }
+  main {
+    background-color: white;
   }
 }
 /*# sourceMappingURL=style.css.map */
