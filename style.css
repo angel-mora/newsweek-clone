@@ -175,6 +175,16 @@ main {
   color: rgba(39, 39, 39, 0.5);
 }
 
+.hover-red-underline {
+  color: black;
+}
+
+.hover-red-underline:hover {
+  -webkit-text-decoration: #f72210 underline;
+          text-decoration: #f72210 underline;
+  color: inherit;
+}
+
 .latest-news .media {
   margin: 5px 0;
   height: 105px;
@@ -442,6 +452,17 @@ main {
 
 .location {
   display: none;
+  color: white;
+}
+
+.location:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.sign-in:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .newsletter-logo {
@@ -594,6 +615,21 @@ main {
   position: sticky;
   top: 70px;
   z-index: 0;
+}
+
+.red-link {
+  color: black;
+}
+
+.red-link:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
+.hover-none,
+.hover-none:hover {
+  color: black;
+  text-decoration: none;
 }
 
 @media (min-width: 401px) {
