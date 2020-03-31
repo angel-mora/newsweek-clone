@@ -29,15 +29,15 @@ figure {
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   list-style: none outside none;
   border: 0 none;
   outline: 0 none;
@@ -54,7 +54,7 @@ body {
   line-height: 20px;
   background-color: #f4f5f6 !important;
   color: #333;
-  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -175,8 +175,8 @@ main {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .footer .editions span {
@@ -246,6 +246,11 @@ main {
   max-height: 550px;
 }
 
+.top-story-p {
+  font-size: 13px;
+  margin-top: -1rem;
+}
+
 .culture-travel .top-story-p {
   color: rgba(39, 39, 39, 0.5);
 }
@@ -256,8 +261,42 @@ main {
 
 .hover-red-underline:hover {
   -webkit-text-decoration: #f72210 underline;
-          text-decoration: #f72210 underline;
+  text-decoration: #f72210 underline;
   color: inherit;
+}
+
+.newsletter {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f4f5f6;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.newsletter h2 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.newsletter button {
+  background-color: #f72210;
+  margin: 0 auto;
+}
+
+.newsletter p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsletter .media-body {
+  width: 100%;
+}
+
+.newsletter .newsletter-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 160px;
 }
 
 .latest-news .media {
@@ -294,8 +333,8 @@ main {
 .sign-up {
   width: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .sign-up .gray-box {
@@ -313,8 +352,8 @@ main {
 
 .subscribe {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .subscribe .gray-box {
@@ -344,45 +383,11 @@ main {
   margin: 0 auto;
 }
 
-.newsletter {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  background-color: #f4f5f6;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.newsletter h2 {
-  font-size: 19px;
-  font-weight: bold;
-}
-
-.newsletter button {
-  background-color: #f72210;
-  margin: 0 auto;
-}
-
-.newsletter p {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.newsletter .media-body {
-  width: 100%;
-}
-
-.newsletter .newsletter-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 160px;
-}
-
 .img-cover {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .tag-box {
@@ -422,11 +427,6 @@ main {
 .lora-h2 {
   font-family: "Lora", serif;
   font-size: 20px;
-}
-
-.top-story-p {
-  font-size: 13px;
-  margin-top: -1rem;
 }
 
 .description {
@@ -479,8 +479,8 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #opinion-border-blue {
@@ -491,8 +491,8 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .debate-author {
@@ -636,14 +636,15 @@ main {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     margin-left: 25px;
     color: white;
   }
+
   #weather-icon span {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 15px;
@@ -654,6 +655,7 @@ main {
   .sign-in {
     font-size: 18px;
   }
+
   .white-box-red-font {
     font-size: 18px;
     width: 130px;
@@ -666,11 +668,11 @@ main {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 15px;
   }
 }
@@ -679,38 +681,45 @@ main {
   .opinion .media {
     min-height: 120px;
   }
+
   .newsletter .media-body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
+
   .newsletter .media-body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
+
   .newsletter .newsletter-img {
     width: 191px;
     height: 190px;
   }
+
   .newsletter button {
     margin: 0;
   }
+
   #subscribe-btn {
     margin-left: 1rem !important;
   }
+
   .footer-copy-rrss {
     border-bottom: none !important;
   }
+
   .editions span {
     display: inline !important;
   }
@@ -721,6 +730,7 @@ main {
     width: 191px;
     height: 301px !important;
   }
+
   main {
     background-color: white;
   }
