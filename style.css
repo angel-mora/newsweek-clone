@@ -62,49 +62,6 @@ main {
   max-width: 1310px;
 }
 
-.big-header {
-  background-color: #f72210;
-  color: white;
-  font-family: "Roboto Condensed", sans-serif;
-  max-width: 1310px;
-}
-
-.big-header .header-top {
-  height: 95px;
-}
-
-.big-header .header-top a:hover {
-  text-decoration: none;
-}
-
-.big-header .header-top .today {
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.big-header .header-top .header-logo {
-  fill: white;
-}
-
-.big-header .header-top .sign-in {
-  color: white;
-}
-
-.big-header .header-bottom {
-  height: 56px;
-  background-color: white;
-  color: black;
-  font-size: 19px;
-}
-
-.big-header .header-bottom a {
-  color: black;
-}
-
-.big-header .header-bottom a:hover {
-  text-decoration: none;
-  color: #f72210;
-}
-
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -127,11 +84,31 @@ main {
   fill: white;
 }
 
-.white-box-red-font {
-  width: 71px;
-  height: 26px;
-  background-color: white;
-  margin-left: 7px;
+.sign-in:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.opinion-author {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.opinion-author span {
+  font-weight: bold;
+}
+
+.vs span {
+  height: 45px;
+  width: 45px;
+  line-height: 30px;
+  border-radius: 30px;
+  background-color: black;
+  color: #d6d6d6;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .navbar {
@@ -163,8 +140,106 @@ main {
   display: none;
 }
 
-#red {
+.footer {
+  background-color: white;
+  color: #555;
+}
+
+.footer .logo {
+  width: 236px;
+  height: 36px;
+  fill: #f72210;
+}
+
+.footer .copyright {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.footer .editions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.footer .editions h3 {
+  font-size: 14px;
+}
+
+.footer .editions a {
+  text-decoration: none;
+  color: #555;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .editions span {
+  display: none;
+}
+
+.big-header {
+  background-color: #f72210;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  max-width: 1310px;
+}
+
+.big-header .header-bottom {
+  height: 56px;
+  background-color: white;
+  color: black;
+  font-size: 19px;
+}
+
+.big-header .header-bottom a {
+  color: black;
+}
+
+.big-header .header-bottom a:hover {
+  text-decoration: none;
   color: #f72210;
+}
+
+.big-header .header-top {
+  height: 95px;
+}
+
+.big-header .header-top a:hover {
+  text-decoration: none;
+}
+
+.big-header .header-top .today {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.big-header .header-top .header-logo {
+  fill: white;
+}
+
+.big-header .header-top .sign-in {
+  color: white;
+}
+
+.white-box-red-font {
+  width: 71px;
+  height: 26px;
+  background-color: white;
+  margin-left: 7px;
+}
+
+.newsweek-logo {
+  width: 426px;
+  height: 90px;
+}
+
+.red {
+  color: #f72210 !important;
 }
 
 .top-story {
@@ -420,16 +495,6 @@ main {
           align-items: center;
 }
 
-.opinion-author {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.opinion-author span {
-  font-weight: bold;
-}
-
 .debate-author {
   position: relative;
   top: -15px;
@@ -438,29 +503,12 @@ main {
   height: 63px;
 }
 
-.vs span {
-  height: 45px;
-  width: 45px;
-  line-height: 30px;
-  border-radius: 30px;
-  background-color: black;
-  color: #d6d6d6;
-  text-align: center;
-  font-size: 1em;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
 .location {
   display: none;
   color: white;
 }
 
 .location:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.sign-in:hover {
   text-decoration: none;
   color: white;
 }
@@ -565,56 +613,6 @@ main {
   font-size: 14px;
   text-transform: uppercase;
   color: #555;
-}
-
-.footer {
-  background-color: white;
-  color: #555;
-}
-
-.footer .logo {
-  width: 236px;
-  height: 36px;
-  fill: #f72210;
-}
-
-.footer .copyright {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-}
-
-.footer .editions {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-.footer .editions h3 {
-  font-size: 14px;
-}
-
-.footer .editions a {
-  text-decoration: none;
-  color: #555;
-  padding-right: 1rem;
-  padding-bottom: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.footer .editions span {
-  display: none;
-}
-
-.sticky-tops {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 70px;
-  z-index: 0;
 }
 
 .red-link {

@@ -6,12 +6,12 @@ $gray: #555;
 $light-gray: rgba(39, 39, 39, 0.5);
 $bg-gray: #f4f5f6;
 $roboto: 'Roboto Condensed',
-sans-serif;
+  sans-serif;
 $arial: Arial,
-Helvetica,
-sans-serif;
+  Helvetica,
+  sans-serif;
 $lora: 'Lora',
-serif;
+  serif;
 // universal-setup
 html,
 body,
@@ -38,644 +38,646 @@ footer,
 nav,
 section,
 figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    box-sizing: border-box;
-    font-family: $arial, Helvetica, sans-serif;
-    // overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: $arial, Helvetica, sans-serif;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
-    list-style: none outside none;
-    border: 0 none;
-    outline: 0 none;
+  box-sizing: inherit;
+  list-style: none outside none;
+  border: 0 none;
+  outline: 0 none;
 }
 
 a,
 a:hover {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-    font-size: 15px;
-    line-height: 20px;
-    background-color: #f4f5f6 !important;
-    color: #333;
-    font-family: $arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #f4f5f6 !important;
+  color: #333;
+  font-family: $arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 main {
-    max-width: 1310px;
+  max-width: 1310px;
 }
 
 // header
-.big-header {
-    background-color: $red;
-    color: $white;
-    font-family: $roboto;
-    max-width: 1310px;
-    .header-top {
-        height: 95px;
-        a:hover {
-            text-decoration: none;
-        }
-        .today {
-            font-family: $roboto;
-        }
-        .header-logo {
-            fill: $white;
-        }
-        .sign-in {
-            color: $white;
-        }
-    }
-    .header-bottom {
-        height: 56px;
-        background-color: $white;
-        color: black;
-        font-size: 19px;
-        a {
-            color: black;
-        }
-        a:hover {
-            text-decoration: none;
-            color: $red;
-        }
-    }
-}
-
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 999999;
-    background-color: $red;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    font-family: $roboto;
-    font-size: 14px;
-    a {
-        color: $white;
-    }
-    .header-logo {
-        width: 132px;
-        fill: $white;
-    }
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  background-color: $red;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: $roboto;
+  font-size: 14px;
+
+  a {
+    color: $white;
+  }
+
+  .header-logo {
+    width: 132px;
+    fill: $white;
+  }
 }
 
-.white-box-red-font {
-    width: 71px;
-    height: 26px;
-    background-color: $white;
-    margin-left: 7px;
+.sign-in:hover {
+  text-decoration: none;
+  color: $white;
+}
+
+.opinion-author {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $roboto;
+  span {
+    font-weight: bold;
+  }
+}
+
+.vs {
+  span {
+    height: 45px;
+    width: 45px;
+    line-height: 30px;
+    border-radius: 30px;
+    background-color: black;
+    color: #d6d6d6;
+    text-align: center;
+    font-size: 1em;
+    font-family: $roboto;
+  }
 }
 
 .navbar {
-    width: 100%;
-    span {
-        font-weight: normal;
-        color: $light-gray;
-    }
-    input {
-        width: 65px;
-        font-family: $arial;
-        color: $light-gray;
-    }
-    .date {
-        color: $white;
-        margin-left: 10px;
-    }
-    #pink {
-        color: $pink;
-        margin-left: 7px;
-    }
-    #weather-icon {
-        display: none;
-    }
+  width: 100%;
+  span {
+    font-weight: normal;
+    color: $light-gray;
+  }
+  input {
+    width: 65px;
+    font-family: $arial;
+    color: $light-gray;
+  }
+  .date {
+    color: $white;
+    margin-left: 10px;
+  }
+  #pink {
+    color: $pink;
+    margin-left: 7px;
+  }
+  #weather-icon {
+    display: none;
+  }
 }
 
-#red {
-    color: $red;
+.footer {
+  background-color: $white;
+  color: $gray;
+  .logo {
+    width: 236px;
+    height: 36px;
+    fill: $red;
+  }
+  .copyright {
+    font-family: $arial;
+    font-size: 12px;
+  }
+  .editions {
+    font-family: $arial;
+    font-size: 14px;
+    h3 {
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: $gray;
+      padding-right: 1rem;
+      padding-bottom: 0.5rem;
+      display: flex;
+      flex-direction: row;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.big-header {
+  background-color: $red;
+  color: $white;
+  font-family: $roboto;
+  max-width: 1310px;
+
+  .header-bottom {
+    height: 56px;
+    background-color: $white;
+    color: black;
+    font-size: 19px;
+
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+      color: $red;
+    }
+  }
+  .header-top {
+    height: 95px;
+    a:hover {
+      text-decoration: none;
+    }
+    .today {
+      font-family: $roboto;
+    }
+    .header-logo {
+      fill: $white;
+    }
+    .sign-in {
+      color: $white;
+    }
+  }
+}
+
+.white-box-red-font {
+  width: 71px;
+  height: 26px;
+  background-color: $white;
+  margin-left: 7px;
+}
+
+.newsweek-logo {
+  width: 426px;
+  height: 90px;
+}
+
+.red {
+  color: $red !important;
 }
 
 // main section
 .top-story {
-    max-height: 550px;
+  max-height: 550px;
 }
 
 .culture-travel {
-    .top-story-p {
-        color: $light-gray;
-    }
+  .top-story-p {
+    color: $light-gray;
+  }
 }
 
 .hover-red-underline {
-    color: black;
+  color: black;
 }
 
 .hover-red-underline:hover {
-    text-decoration: $red underline;
-    color: inherit;
+  text-decoration: $red underline;
+  color: inherit;
 }
 
 .latest-news {
-    .media {
-        margin: 5px 0;
-        height: 105px;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+  .media {
+    margin: 5px 0;
+    height: 105px;
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
     }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
     }
+  }
+  .media-body {
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
 }
 
 .sign-up {
-    width: 100%;
-    justify-content: center;
-    .gray-box {
-        width: 300px;
-        height: 165px;
-        margin: 0 auto;
-        background-color: $bg-gray;
-        font-family: $roboto;
-        font-weight: bold;
-        h2 {
-            font-size: 19px;
-        }
+  width: 100%;
+  justify-content: center;
+  .gray-box {
+    width: 300px;
+    height: 165px;
+    margin: 0 auto;
+    background-color: $bg-gray;
+    font-family: $roboto;
+    font-weight: bold;
+    h2 {
+      font-size: 19px;
     }
+  }
 }
 
 .subscribe {
-    justify-content: center;
-    .gray-box {
-        width: 100%;
-        margin: 0 auto;
-        background-color: $bg-gray;
-        font-family: $roboto;
-        h2 {
-            font-size: 19px;
-            font-weight: bold;
-        }
-        button {
-            background-color: $red;
-            margin: 0 auto;
-        }
-        p {
-            font-family: $arial;
-        }
-    }
-}
-
-.subscribe-overlap {
-    width: 170px;
-    height: 227px;
-    margin: 0 auto;
-}
-
-.newsletter {
-    justify-content: center;
+  justify-content: center;
+  .gray-box {
+    width: 100%;
     margin: 0 auto;
     background-color: $bg-gray;
     font-family: $roboto;
     h2 {
-        font-size: 19px;
-        font-weight: bold;
+      font-size: 19px;
+      font-weight: bold;
     }
     button {
-        background-color: $red;
-        margin: 0 auto;
+      background-color: $red;
+      margin: 0 auto;
     }
     p {
-        font-family: $arial;
+      font-family: $arial;
     }
-    .media-body {
-        width: 100%;
-    }
-    .newsletter-img {
-        display: flex;
-        height: 160px;
-    }
+  }
+}
+
+.subscribe-overlap {
+  width: 170px;
+  height: 227px;
+  margin: 0 auto;
+}
+
+.newsletter {
+  justify-content: center;
+  margin: 0 auto;
+  background-color: $bg-gray;
+  font-family: $roboto;
+  h2 {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  button {
+    background-color: $red;
+    margin: 0 auto;
+  }
+  p {
+    font-family: $arial;
+  }
+  .media-body {
+    width: 100%;
+  }
+  .newsletter-img {
+    display: flex;
+    height: 160px;
+  }
 }
 
 .img-cover {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .tag-box {
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: $red;
-    font-family: $roboto;
-    position: absolute;
-    left: 0;
-    margin-top: -1.8rem;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $red;
+  font-family: $roboto;
+  position: absolute;
+  left: 0;
+  margin-top: -1.8rem;
 }
 
 .gray-tag-box {
-    height: 20px;
-    background-color: #c2d4d7;
-    color: black;
-    font-family: $arial;
-    font-size: 13px;
-    font-weight: 300;
-    position: absolute;
-    left: 0;
-    margin-top: -1.25rem;
+  height: 20px;
+  background-color: #c2d4d7;
+  color: black;
+  font-family: $arial;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  margin-top: -1.25rem;
 }
 
 .h1-title {
-    color: #aaa;
-    font-size: 16px;
-    font-family: $roboto;
+  color: #aaa;
+  font-size: 16px;
+  font-family: $roboto;
 }
 
 .top-story-h2 {
-    font-family: $roboto;
-    font-size: 22px;
-    font-weight: bolder;
+  font-family: $roboto;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 .lora-h2 {
-    font-family: $lora;
-    font-size: 20px;
+  font-family: $lora;
+  font-size: 20px;
 }
 
 .top-story-p {
-    font-size: 13px;
-    margin-top: -1rem;
+  font-size: 13px;
+  margin-top: -1rem;
 }
 
 .description {
-    font-size: 13px;
-    margin-top: 5px;
-    font-family: $arial !important;
-    text-transform: none !important;
-    font-weight: 400 !important;
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: $arial !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
 }
 
 .section-font-style {
-    .media {
-        height: 90px;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+  .media {
+    height: 90px;
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
     }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
     }
+  }
+  .media-body {
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
 }
 
 .opinion {
-    .media {
-        height: auto;
-    }
+  .media {
+    height: auto;
+  }
 }
 
 #opinion-border-red {
-    border-top: 3px solid $red;
-    border-bottom: 3px double #aaa;
-    height: auto;
-    display: flex;
-    align-items: center;
+  border-top: 3px solid $red;
+  border-bottom: 3px double #aaa;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 #opinion-border-blue {
-    border-top: 3px solid #1c87fb;
-    border-bottom: 3px double #aaa;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-
-.opinion-author {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: $roboto;
-    span {
-        font-weight: bold;
-    }
+  border-top: 3px solid #1c87fb;
+  border-bottom: 3px double #aaa;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .debate-author {
-    position: relative;
-    top: -15px;
-    right: 15px;
-    width: 67px;
-    height: 63px;
-}
-
-.vs {
-    span {
-        height: 45px;
-        width: 45px;
-        line-height: 30px;
-        border-radius: 30px;
-        background-color: black;
-        color: #d6d6d6;
-        text-align: center;
-        font-size: 1em;
-        font-family: $roboto;
-    }
+  position: relative;
+  top: -15px;
+  right: 15px;
+  width: 67px;
+  height: 63px;
 }
 
 .location {
-    display: none;
-    color: $white;
+  display: none;
+  color: $white;
 }
 
 .location:hover {
-    text-decoration: none;
-    color: $white;
-}
-
-.sign-in:hover {
-    text-decoration: none;
-    color: $white;
+  text-decoration: none;
+  color: $white;
 }
 
 .newsletter-logo {
-    background-color: $red;
-    width: 29px;
-    height: 28px;
+  background-color: $red;
+  width: 29px;
+  height: 28px;
 }
 
 .more-stories {
-    .media {
-        height: auto;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+  .media {
+    height: auto;
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
     }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
     }
+  }
+  .media-body {
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
 }
 
 .mg-category-item {
-    h1 {
-        font-size: 19px;
-        font-family: $roboto;
-    }
+  h1 {
+    font-size: 19px;
+    font-family: $roboto;
+  }
 }
 
 .mg-follow-item {
-    font-family: $roboto;
-    font-size: 16px;
-    color: $red;
+  font-family: $roboto;
+  font-size: 16px;
+  color: $red;
 }
 
 .slideshow-red-h2 {
-    font-family: $roboto;
-    font-size: 22px;
-    color: $red;
+  font-family: $roboto;
+  font-size: 22px;
+  color: $red;
 }
 
 .btn-white-bg-red {
-    background-color: $red;
-    font-family: $roboto;
-    font-size: 15px;
-    color: $white;
+  background-color: $red;
+  font-family: $roboto;
+  font-size: 15px;
+  color: $white;
 }
 
 .btn-red-bg-white {
-    background-color: $white;
-    font-family: $roboto;
-    font-size: 15px;
-    color: $red;
+  background-color: $white;
+  font-family: $roboto;
+  font-size: 15px;
+  color: $red;
 }
 
 .magazine-h2 {
-    font-size: 16px;
-    font-family: $roboto;
+  font-size: 16px;
+  font-family: $roboto;
 }
 
 .slideshow-font-style {
-    .media {
-        height: 115px;
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+  .media {
+    height: 115px;
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
     }
-    .media-body {
-        h2,
-        p {
-            font-size: 17px;
-            font-family: $roboto;
-            font-weight: bolder;
-        }
-        p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $gray;
-        }
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
     }
-}
-
-.footer {
-    background-color: $white;
-    color: $gray;
-    .logo {
-        width: 236px;
-        height: 36px;
-        fill: $red;
+  }
+  .media-body {
+    h2,
+    p {
+      font-size: 17px;
+      font-family: $roboto;
+      font-weight: bolder;
     }
-    .copyright {
-        font-family: $arial;
-        font-size: 12px;
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $gray;
     }
-    .editions {
-        font-family: $arial;
-        font-size: 14px;
-        h3 {
-            font-size: 14px;
-        }
-        a {
-            text-decoration: none;
-            color: $gray;
-            padding-right: 1rem;
-            padding-bottom: 0.5rem;
-            display: flex;
-            flex-direction: row;
-        }
-        span {
-            display: none;
-        }
-    }
-}
-
-.sticky-tops {
-    position: sticky;
-    top: 70px;
-    z-index: 0;
+  }
 }
 
 .red-link {
-    color: black;
+  color: black;
 }
 
 .red-link:hover {
-    color: $red;
-    text-decoration: none;
+  color: $red;
+  text-decoration: none;
 }
 
 .hover-none,
 .hover-none:hover {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 @media (min-width: 401px) {
-    #weather-icon {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-left: 25px;
-        color: $white;
-        span {
-            font-family: $roboto;
-            font-size: 15px;
-        }
+  #weather-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 25px;
+    color: $white;
+    span {
+      font-family: $roboto;
+      font-size: 15px;
     }
+  }
 }
 
 @media (min-width: 481px) {
-    .sign-in {
-        font-size: 18px;
-    }
-    .white-box-red-font {
-        font-size: 18px;
-        width: 130px;
-    }
+  .sign-in {
+    font-size: 18px;
+  }
+  .white-box-red-font {
+    font-size: 18px;
+    width: 130px;
+  }
 }
 
 @media (min-width: 641px) {
-    .location {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-    }
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
 }
 
 // medium size
 @media (min-width: 768px) {
-    .opinion {
-        .media {
-            min-height: 120px;
-        }
+  .opinion {
+    .media {
+      min-height: 120px;
     }
-    .newsletter {
-        .media-body {
-            display: flex;
-            justify-content: start;
-            align-items: start;
-            p {
-                display: flex;
-                justify-content: start;
-            }
-        }
-        .newsletter-img {
-            width: 191px;
-            height: 190px;
-        }
-        button {
-            margin: 0;
-        }
+  }
+  .newsletter {
+    .media-body {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      p {
+        display: flex;
+        justify-content: start;
+      }
     }
-    #subscribe-btn {
-        margin-left: 1rem !important;
+    .newsletter-img {
+      width: 191px;
+      height: 190px;
     }
-    .footer-copy-rrss {
-        border-bottom: none !important;
+    button {
+      margin: 0;
     }
-    .editions {
-        span {
-            display: inline !important;
-        }
+  }
+  #subscribe-btn {
+    margin-left: 1rem !important;
+  }
+  .footer-copy-rrss {
+    border-bottom: none !important;
+  }
+  .editions {
+    span {
+      display: inline !important;
     }
+  }
 }
 
 // large size
 @media (min-width: 992px) {
-    .newsletter-img {
-        width: 191px;
-        height: 301px !important;
-    }
-    main {
-        background-color: $white;
-    }
+  .newsletter-img {
+    width: 191px;
+    height: 301px !important;
+  }
+  main {
+    background-color: $white;
+  }
 }
