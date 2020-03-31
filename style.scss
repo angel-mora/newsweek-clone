@@ -106,6 +106,7 @@ main {
   text-transform: uppercase;
   font-size: 14px;
   font-family: $roboto;
+
   span {
     font-weight: bold;
   }
@@ -127,23 +128,28 @@ main {
 
 .navbar {
   width: 100%;
+
   span {
     font-weight: normal;
     color: $light-gray;
   }
+
   input {
     width: 65px;
     font-family: $arial;
     color: $light-gray;
   }
+
   .date {
     color: $white;
     margin-left: 10px;
   }
+
   #pink {
     color: $pink;
     margin-left: 7px;
   }
+
   #weather-icon {
     display: none;
   }
@@ -152,21 +158,26 @@ main {
 .footer {
   background-color: $white;
   color: $gray;
+
   .logo {
     width: 236px;
     height: 36px;
     fill: $red;
   }
+
   .copyright {
     font-family: $arial;
     font-size: 12px;
   }
+
   .editions {
     font-family: $arial;
     font-size: 14px;
+
     h3 {
       font-size: 14px;
     }
+
     a {
       text-decoration: none;
       color: $gray;
@@ -175,6 +186,7 @@ main {
       display: flex;
       flex-direction: row;
     }
+
     span {
       display: none;
     }
@@ -196,22 +208,28 @@ main {
     a {
       color: black;
     }
+
     a:hover {
       text-decoration: none;
       color: $red;
     }
   }
+
   .header-top {
     height: 95px;
+
     a:hover {
       text-decoration: none;
     }
+
     .today {
       font-family: $roboto;
     }
+
     .header-logo {
       fill: $white;
     }
+
     .sign-in {
       color: $white;
     }
@@ -239,6 +257,11 @@ main {
   max-height: 550px;
 }
 
+.top-story-p {
+  font-size: 13px;
+  margin-top: -1rem;
+}
+
 .culture-travel {
   .top-story-p {
     color: $light-gray;
@@ -254,22 +277,55 @@ main {
   color: inherit;
 }
 
+.newsletter {
+  justify-content: center;
+  margin: 0 auto;
+  background-color: $bg-gray;
+  font-family: $roboto;
+
+  h2 {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: $red;
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: $arial;
+  }
+
+  .media-body {
+    width: 100%;
+  }
+
+  .newsletter-img {
+    display: flex;
+    height: 160px;
+  }
+}
+
 .latest-news {
   .media {
     margin: 5px 0;
     height: 105px;
+
     h2,
     p {
       font-size: 17px;
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
       color: $gray;
     }
   }
+
   .media-body {
     h2,
     p {
@@ -277,6 +333,7 @@ main {
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
@@ -288,6 +345,7 @@ main {
 .sign-up {
   width: 100%;
   justify-content: center;
+
   .gray-box {
     width: 300px;
     height: 165px;
@@ -295,6 +353,7 @@ main {
     background-color: $bg-gray;
     font-family: $roboto;
     font-weight: bold;
+
     h2 {
       font-size: 19px;
     }
@@ -303,19 +362,23 @@ main {
 
 .subscribe {
   justify-content: center;
+
   .gray-box {
     width: 100%;
     margin: 0 auto;
     background-color: $bg-gray;
     font-family: $roboto;
+
     h2 {
       font-size: 19px;
       font-weight: bold;
     }
+
     button {
       background-color: $red;
       margin: 0 auto;
     }
+
     p {
       font-family: $arial;
     }
@@ -326,31 +389,6 @@ main {
   width: 170px;
   height: 227px;
   margin: 0 auto;
-}
-
-.newsletter {
-  justify-content: center;
-  margin: 0 auto;
-  background-color: $bg-gray;
-  font-family: $roboto;
-  h2 {
-    font-size: 19px;
-    font-weight: bold;
-  }
-  button {
-    background-color: $red;
-    margin: 0 auto;
-  }
-  p {
-    font-family: $arial;
-  }
-  .media-body {
-    width: 100%;
-  }
-  .newsletter-img {
-    display: flex;
-    height: 160px;
-  }
 }
 
 .img-cover {
@@ -398,11 +436,6 @@ main {
   font-size: 20px;
 }
 
-.top-story-p {
-  font-size: 13px;
-  margin-top: -1rem;
-}
-
 .description {
   font-size: 13px;
   margin-top: 5px;
@@ -414,18 +447,21 @@ main {
 .section-font-style {
   .media {
     height: 90px;
+
     h2,
     p {
       font-size: 17px;
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
       color: $gray;
     }
   }
+
   .media-body {
     h2,
     p {
@@ -433,6 +469,7 @@ main {
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
@@ -490,18 +527,21 @@ main {
 .more-stories {
   .media {
     height: auto;
+
     h2,
     p {
       font-size: 17px;
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
       color: $gray;
     }
   }
+
   .media-body {
     h2,
     p {
@@ -509,6 +549,7 @@ main {
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
@@ -558,18 +599,21 @@ main {
 .slideshow-font-style {
   .media {
     height: 115px;
+
     h2,
     p {
       font-size: 17px;
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
       color: $gray;
     }
   }
+
   .media-body {
     h2,
     p {
@@ -577,6 +621,7 @@ main {
       font-family: $roboto;
       font-weight: bolder;
     }
+
     p {
       font-size: 14px;
       text-transform: uppercase;
@@ -607,6 +652,7 @@ main {
     justify-content: flex-start;
     margin-left: 25px;
     color: $white;
+
     span {
       font-family: $roboto;
       font-size: 15px;
@@ -618,6 +664,7 @@ main {
   .sign-in {
     font-size: 18px;
   }
+
   .white-box-red-font {
     font-size: 18px;
     width: 130px;
@@ -640,30 +687,37 @@ main {
       min-height: 120px;
     }
   }
+
   .newsletter {
     .media-body {
       display: flex;
       justify-content: start;
       align-items: start;
+
       p {
         display: flex;
         justify-content: start;
       }
     }
+
     .newsletter-img {
       width: 191px;
       height: 190px;
     }
+
     button {
       margin: 0;
     }
   }
+
   #subscribe-btn {
     margin-left: 1rem !important;
   }
+
   .footer-copy-rrss {
     border-bottom: none !important;
   }
+
   .editions {
     span {
       display: inline !important;
@@ -677,6 +731,7 @@ main {
     width: 191px;
     height: 301px !important;
   }
+
   main {
     background-color: $white;
   }
