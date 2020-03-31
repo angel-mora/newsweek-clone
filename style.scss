@@ -45,7 +45,7 @@ figure {
 html {
     box-sizing: border-box;
     font-family: $arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 *,
@@ -79,9 +79,6 @@ main {
 // header
 .big-header {
     background-color: $red;
-    position: sticky;
-    top: 0;
-    z-index: 99;
     color: $white;
     font-family: $roboto;
     max-width: 1310px;
@@ -118,7 +115,7 @@ main {
 .header {
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 999999;
     background-color: $red;
     height: 50px;
     margin: 0;
