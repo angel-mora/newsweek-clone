@@ -1,40 +1,16 @@
 # newsweek-clone
 Microverse 
 
-# Structure
-
-- Thursday march 5th
-    - Inspecting content structure
-- Friday
-    -  Complete navbar
-- Saturday
-    - Complete main boxes layout
-- Sunday
-    - Fix issues
-- Monday 16th
-    - submit 
-
-Monday 16th NO ADVANCE YET
-Duties for today:
-
-- Review Bootstrap basics
-- Work with navbar
-
-11-11.30 Declutter tabs
-
-Tuesday:
-
-- Work on Mobile version
-
-
-
 ## Built With
 
-- HTML, CSS
+- HTML
+- CSS
+- SASS
+- Bootstrap
 
 ## Live Demo
 
-link
+[Watch it here](link)
 
 ## Author
 
@@ -58,16 +34,5 @@ Thanks to Microverse!
 
 ## 📝 License
 
-none
-
-## PROJEC NOTES
-
-In order to accomplish this project, I revievewd both Bootstrap and SASS.
-
-### BOOTSTRAP CONCEPTS
-
-
-
-### SASS MAIN CONCEPTS
-
+Copyfair
 
