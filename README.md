@@ -10,7 +10,7 @@ Microverse
 
 ## Live Demo
 
-[Watch it here](link)
+[Watch it here](https://rawcdn.githack.com/angel-mora/newsweek-clone/12be915761087738991de98b55af7026ae6b38e9/index.html)
 
 ## Author
 
