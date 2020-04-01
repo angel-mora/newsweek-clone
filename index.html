@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/03774beff9.js" crossorigin="anonymous"></script>
+
+    <title>Newsweek Clone</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="scroll.js"></script>
+
+    <header class="big-header container-fluid d-none d-lg-flex flex-column border-bottom">
+        <div class="row d-flex header-top">
+            <div class="col today pt-3 pl-4">
+                <p class="font-weight-bold"><i class="fas fa-cloud-sun"></i>24° Mexico City, MX</p>
+                <p>Thu, Mar 05, 2020</p>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a href="#">
+                    <img src="images/newsweek_logo.svg" class="newsweek-logo" alt="logo">
+                </a>
+            </div>
+            <div class="col justify-content-end d-flex align-items-end mb-3 font-weight-bold">
+                <a href="#" class="sign-in">SIGN IN</a>
+                <a href="#" class="white-box-red-font text-center red">SUBSCRIBE &gt;</a>
+            </div>
+        </div>
+        <div class="row font-weight-bold header-bottom">
+            <nav class="navbar d-flex justify-content-around">
+                <a href="#">U.S.</a><span class="">|</span>
+                <a href="#">World</a><span class="">|</span>
+                <a href="#">Business</a><span class="">|</span>
+                <a href="#">Tech & Science</a><span class="">|</span>
+                <a href="#">Culture</a><span class="">|</span>
+                <a href="#">Newsgeek</a><span class="">|</span>
+                <a href="#">Sports</a><span class="">|</span>
+                <a href="#">Health</a><span class="">|</span>
+                <a href="#">The Debate</a><span class="">|</span>
+                <a href="#">Vantage</a><span class="">|</span>
+                <a href="#" class="pl-0">Weather</a>
+                <div class="d-flex justify-content-start">
+                    <input type="text" placeholder="Search"><i class="fas fa-search pt-1 pl-1"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <header class="d-flex align-items-center header d-lg-none font-weight-bold">
+        <div class="d-flex flex-row justify-content-between navbar">
+
+            <div class="d-flex flex-row justify-content-between order-2">
+
+                <a href="#" class="d-flex align-items-center justify-content-center sign-in">SIGN IN</a>
+                <a href="#" class="white-box-red-font d-flex align-items-center justify-content-center red">SUBSCRIBE</a>
+                <a href="#" class="d-flex align-items-center justify-content-center" id="pink">
+                    <i class="fas fa-bars fa-2x"></i>
+                </a>
+            </div>
+            <div class="d-flex flex-row order-1">
+                <a href="#">
+                    <svg class="header-logo" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+                        <path
+                            d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                        </path>
+                    </svg>
+                </a>
+
+                <i class="fas fa-cloud-sun" id="weather-icon"><span>24°</span></i>
+                <a href="#" class="location pl-2">Mexico City, MX &gt;</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- content section-->
+
+    <main class="container-fluid p-0">
+        <div class="multiple-heights">
+            <div class="row">
+                <div class="order-md-2 col-md-7 col-lg-5 d-flex flex-column w-55 ml-lg-0 pl-md-0 ml-md-0 mr-lg-0 pr-lg-0 mr-md-2">
+                    <section class="order-0 order-lg-1 card p-2 top-story d-lg-flex flex-column rounded-0 no-gutters border-0 mb-3 mb-md-0 pb-lg-0 mb-lg-0">
+                        <h1 class="mb-3 mt-3 text-uppercase font-weight-bold h1-title d-flex align-items-start justify-content-start">
+                            Top Story
+                        </h1>
+                        <article class="card border-0 mb-lg-0">
+                            <div class="card border-0 mb-lg-0">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-top-story.jpg" alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="hover-red-underline">
+                                    <h2 class="top-story-h2 p-2">Exclusive: FBI Sees Record Background Checks for Gun Sales Amid Coronavirus
+                                    </h2>
+                                </a>
+                                <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="order-1 d-md-none card p-2 featured-stories no-gutters border-0 mb-3">
+                        <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-start justify-content-start">
+                            Featured Stories
+                        </h1>
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0 pt-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#" class="hover-red-underline">
+                                <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                                </h2>
+                            </a>
+
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0 pt-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#" class="hover-red-underline">
+                                <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                                </h2>
+                            </a>
+
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0 pt-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#" class="hover-red-underline">
+                                <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                                </h2>
+                            </a>
+
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0 pt-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#" class="hover-red-underline">
+                                <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                                </h2>
+                            </a>
+
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+
+                    </section>
+                    <section class="order-6 order-lg-1 card p-2 culture-travel section-font-style border-0 mb-3 mb-md-0">
+                        <h1 class="pl-md-2 pt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-2">
+                            Culture & Travel
+                        </h1>
+                        <div class="d-flex flex-column flex-md-row">
+                            <article class="card border-0 p-md-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/culture-travel-image-1.jpg" alt="" class="img-cover">
+                                    <div class="gray-tag-box pt-1 pb-1 pl-2 pr-2 d-flex justify-content-center align-items-center">
+                                        <span class="d-flex align-items-center justify-content-end">Travel</span>
+                                    </div>
+                                </a>
+                                <h2 class="lora-h2 p-2">See the World While Social Distancing With These Virtual Tours
+                                </h2>
+                                <p class="top-story-p p-2">What to do with the free time available when trips to the movies, a museum or the theater are out of the question? Here is a list of museums and other popular tourist attractions that have entire collections or performances
+                                    available online.
+                                </p>
+                            </article>
+
+                            <article class="card border-0 p-md-2 pl-lg-0 ml-lg-0">
+                                <a href="#" class="fig-container">
+                                    <img src="images/culture-travel-image-1.jpg" alt="" class="img-cover">
+                                    <div class="gray-tag-box pt-1 pb-1 pl-2 pr-2 d-flex justify-content-center align-items-center">
+                                        <span class="d-flex align-items-center justify-content-end">Travel</span>
+                                    </div>
+                                </a>
+                                <h2 class="lora-h2 p-2">See the World While Social Distancing With These Virtual Tours
+                                </h2>
+                                <p class="top-story-p p-2">What to do with the free time available when trips to the movies, a museum or the theater are out of the question? Here is a list of museums and other popular tourist attractions that have entire collections or performances
+                                    available online.
+                                </p>
+                            </article>
+
+                            <article class="card border-0 p-md-2">
+                                <a href="#" class="fig-container">
+                                    <img src="images/culture-travel-image-1.jpg" alt="" class="img-cover">
+                                    <div class="gray-tag-box pt-1 pb-1 pl-2 pr-2 d-flex justify-content-center align-items-center">
+                                        <span class="d-flex align-items-center justify-content-end">Travel</span>
+                                    </div>
+                                </a>
+                                <h2 class="lora-h2 p-2">See the World While Social Distancing With These Virtual Tours
+                                </h2>
+                                <p class="top-story-p p-2">What to do with the free time available when trips to the movies, a museum or the theater are out of the question? Here is a list of museums and other popular tourist attractions that have entire collections or performances
+                                    available online.
+                                </p>
+                            </article>
+
+                        </div>
+                    </section>
+                    <section class="order-5 order-lg-2 card p-2 more-stories d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
+                        <h1 class="h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title pt-3 mb-1">
+                            More stories
+                        </h1>
+                        <article class="card rounded-0 border-0 more-stories">
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media border-top border-bottom mb-0">
+                                <img src="images/more-stories-1.jpg" alt="" class="pr-1 pt-2">
+                                <div class="media-body p-2">
+                                    <a href="#" class="hover-red-underline">
+                                        <h2>Global Coronavirus Cases Hit 220,000, No New Domestic Cases in China</h2>
+                                    </a>
+                                    <p class="description">The World Health Organization has warned that "Africa should wake up " as more cases emerge across the continent, including the first death in the Sub-Saharan region, while the U.S. death toll hits nearly 150.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </article>
+                    </section>
+                </div>
+
+                <section class="d-none d-md-flex order-md-1 col-md col-lg w-45 card p-2 ml-3 mr-3 featured-stories no-gutters border-0 mb-3 mb-md-0 ml-md-3 pl-md-3 mr-md-0 pr-lg-0">
+                    <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-start justify-content-start">
+                        Featured Stories
+                    </h1>
+                    <article class="card rounded-0 border-0">
+                        <div class="card border-0 pt-2">
+                            <a href="#" class="fig-container">
+                                <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                        </div>
+                        <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                        </h2>
+                        <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                        </p>
+                    </article>
+                    <div class="sticky-top">
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                            </h2>
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+
+                        <article class="card rounded-0 border-0">
+                            <div class="card border-0">
+                                <a href="#" class="fig-container">
+                                    <img src="images/img-featured-stories.jpg " alt="" class="img-cover">
+                                    <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                        <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <h2 class="top-story-h2 p-2">Exclusive: Inside the Military's Secret Plans If Coronavirus Cripples D.C.
+                            </h2>
+                            <p class="top-story-p p-2">A run on gun stores during times of crisis is not a new phenomenon, but dealers told Newsweek that there was something unique about the current pandemonium.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="order-md-3 order-lg-2 col-md-12 col-lg border-0 d-flex flex-column pr-lg-3 pl-lg-0">
+                    <div class="order-lg-0">
+                        <section class="order-2 card p-2 opinion section-font-style d-flex flex-column d-lg-block no-gutters border-0 mb-3 mb-md-0">
+                            <h1 class="mb-0 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
+                                Opinion
+                            </h1>
+                            <article class="pl-2 pr-2 card rounded-0 border-0">
+                                <div class="media border-bottom mb-0">
+                                    <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="red-link">
+                                            <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                            </h2>
+                                        </a>
+                                        <p class="opinion-au">By Nigel Farage</p>
+                                    </div>
+                                </div>
+                                <div class="media border-bottom mb-0">
+                                    <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="red-link">
+                                            <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                            </h2>
+                                        </a>
+                                        <p class="opinion-au">By Nigel Farage</p>
+                                    </div>
+                                </div>
+                                <div class="media border-bottom mb-0">
+                                    <img src="images/opinion.png" alt="" class="pr-1 align-self-center">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="red-link">
+                                            <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                            </h2>
+                                        </a>
+                                        <p class="opinion-au">By Nigel Farage</p>
+                                    </div>
+                                </div>
+                                <div class="media mt-1 mb-0">
+                                    <img src="images/opinion.png " alt=" " class="pr-1 align-self-center">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="red-link">
+                                            <h2>The Virus Is Yet Another Reason for the West to Rethink Its Relationship With China
+                                            </h2>
+                                        </a>
+                                        <p class="opinion-au">By Nigel Farage</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="order-4 card p-2 debate d-flex flex-column row no-gutters border-0 mb-3 mb-md-0">
+                            <h1 class="mb-2 mt-3 h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start">
+                                The Debate
+                            </h1>
+                            <article class="card rounded-0 border-0 section-font-style p-2">
+                                <div class="media mb-0 mr-2" id="opinion-border-red">
+                                    <img src="images/img-the-debate.jpg" alt="" class="pr-1 align-self-center mb-3">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="hover-none">
+                                            <h2>Protecting Us All From an Epidemic Should Be Prioritized Over the Economy</h2>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="opinion-author pt-2">By <span>Nigel Farage</span></p>
+                                    <img src="images/opinion.png" alt="" class="pr-1 align-self-center debate-author">
+                                </div>
+                                <div class="vs d-flex justify-content-center align-items-center">
+                                    <span class="d-flex justify-content-center align-items-center">VS</span>
+                                </div>
+                                <div class="media mt-4 mr-2" id="opinion-border-blue">
+                                    <img src="images/img-the-debate-2.jpg" alt="" class="pr-1 align-self-center mb-3">
+                                    <div class="media-body p-2">
+                                        <a href="#" class="hover-none">
+                                            <h2>In This Fight Against Coronavirus, We Need to Protect Both Lives and Livelihoods
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="opinion-author pt-2">By <span>Asad Hamir</span></p>
+                                    <img src="images/img-the-debate-author2.png" alt="" class="pr-1 align-self-center debate-author">
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                    <div class="order-lg-1 sticky-top">
+                        <section class="order-7 card p-2 latest-news border-0 mb-3 mb-md-0">
+                            <h1 class="h1-title text-uppercase font-weight-bold d-flex align-items-end justify-content-start opinion-title mb-2">
+                                Latest News
+                            </h1>
+                            <article class="media border-bottom">
+                                <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                                <div class="media-body">
+                                    <a href="#" class="red-link">
+                                        <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="media border-bottom">
+                                <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                                <div class="media-body">
+                                    <a href="#" class="red-link">
+                                        <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="media border-bottom">
+                                <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                                <div class="media-body">
+                                    <a href="#" class="red-link">
+                                        <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="media border-bottom">
+                                <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                                <div class="media-body">
+                                    <a href="#" class="red-link">
+                                        <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="media border-bottom">
+                                <img src="images/latest-news-image-1.jpg" alt="" class="pr-3">
+                                <div class="media-body">
+                                    <a href="#" class="red-link">
+                                        <h2>See the World While Social Distancing With These Virtual Tours</h2>
+                                    </a>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="order-8 card sign-up border-0 mb-3 pt-4 mb-md-0 d-flex justify-content-center">
+                            <div class="gray-box p-3 d-flex flex-column align-items-start justify-content-center border">
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mr-2 mb-2">
+                                    <h2 class=" text-uppercase font-weight-bold">Sign Up for our Newsletter</h2>
+                                </div>
+                                <button type="button" class="btn btn-md pt-1 pb-1 btn-secondary btn-lg font-weight-bold rounded-0">SIGN
+                                UP</button>
+                                <p class="mt-2">Update your preferences</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="multiple-grids d-flex flex-column">
+
+            <section class="card p-0 mb-3 border-0">
+                <div class="d-flex align-items-center justify-content-center pt-3 mt-3 pb-2 border-bottom mg-category-item">
+                    <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mb-1 mr-2">
+                    <h1 class="text-uppercase font-weight-bold">In the magazine</h1>
+                </div>
+                <div class="row no-gutters p-2 border-bottom mt-3">
+
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                    <article class="p-2 card border-0 col-md-3">
+                        <a href="#">
+                            <img src="images/magazine-img.jpg" alt="" class="img-cover">
+                        </a>
+                        <div class="d-flex flex-row mt-2">
+                            <button class="btn-white-bg-red text-uppercase font-weight-bold">Features</button>
+                            <button class="btn-red-bg-white text-uppercase font-weight-bold">Health</button>
+                        </div>
+                        <h2 class="magazine-h2 font-weight-bold mt-2">
+                            Is Bernie Sanders Right About Medicare For All?
+                        </h2>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card border-0 m-0 p-2 mb-3 mb-md-0">
+                <div class="d-flex align-items-center justify-content-center pt-3 mt-3 pb-2 border-bottom mg-category-item">
+                    <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mb-1 mr-2">
+                    <h1 class=" text-uppercase font-weight-bold">Editor's Pick</h1>
+                </div>
+                <div class="row no-gutters">
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-6 col-lg-3 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/editors-pick-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end">Politics</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Cuomo Overtakes Sanders in Odds to Be Democratic Candidate
+                            </h2>
+                            <p class="top-story-p p-2">Although the New York governor is not running for the Democratic nomination, more people are putting their odds on him over the senator from Vermont.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card border-right-0 border-left-0 rounded-0 border-bottom p-2 mb-3 mb-md-0">
+                <div class="d-flex align-items-center justify-content-center pt-3 mt-3 pb-2 mg-category-item card border-0">
+                    <img src="images/newsletter-logo.svg" alt="" class="newsletter-logo mb-1 mr-2">
+                    <h1 class=" text-uppercase font-weight-bold">Featured Slideshow</h1>
+                </div>
+
+                <div class="row no-gutters border-bottom">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end border border-danger">11</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Relive the 'Star Wars' Saga at These Filming Locations</h2>
+                        </div>
+                    </article>
+
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end border border-danger">11</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Relive the 'Star Wars' Saga at These Filming Locations</h2>
+                        </div>
+                    </article>
+
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-img.jpg" alt="" class="img-cover">
+                                <div class="tag-box pt-1 pb-1 pl-2 pr-2">
+                                    <span class="font-weight-bold text-uppercase d-flex align-items-center justify-content-end border border-danger">11</span>
+                                </div>
+                            </a>
+                            <h2 class="top-story-h2 p-2">Relive the 'Star Wars' Saga at These Filming Locations</h2>
+                        </div>
+                    </article>
+                </div>
+
+                <h2 class="slideshow-red-h2 font-weight-bold pt-3 border-0">
+                    U.S.
+                </h2>
+                <div class="row no-gutters">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <h2 class="d-none">.</h2>
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                        <h2 class="d-none">.</h2>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                    </article>
+
+                </div>
+
+                <h2 class="slideshow-red-h2 font-weight-bold pt-3 border-0">
+                    World
+                </h2>
+                <div class="row no-gutters">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <h2 class="d-none">.</h2>
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                        <h2 class="d-none">.</h2>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                    </article>
+
+                </div>
+
+                <h2 class="slideshow-red-h2 font-weight-bold pt-3 border-0">
+                    Business
+                </h2>
+                <div class="row no-gutters">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <h2 class="d-none">.</h2>
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                        <h2 class="d-none">.</h2>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                    </article>
+
+                </div>
+
+                <h2 class="slideshow-red-h2 font-weight-bold pt-3 border-0">
+                    Tech & Cience
+                </h2>
+                <div class="row no-gutters">
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <h2 class="d-none">.</h2>
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card col-md-4 border-0 pt-3">
+                        <div class="card border-0">
+                            <a href="#" class="fig-container">
+                                <img src="images/slideshow-us-img.jpg" alt="" class="img-cover">
+
+                            </a>
+                            <h2 class="top-story-h2 p-2">What Governors Say About Reopening Their States By Easter</h2>
+                        </div>
+                    </article>
+                    <article class="p-2 card display-flex flex-column col-md-4 border-0 slideshow-font-style">
+                        <h2 class="d-none">.</h2>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                        <article class="media border-bottom pt-2">
+                            <img src="images/slideshow-us-sm-img.jpg" alt="" class="pr-3">
+                            <div class="media-body">
+                                <h2>Ohio Judge Issues Arrest Warrants for Courtroom No-Shows During COVID-19</h2>
+                            </div>
+                        </article>
+                    </article>
+
+                </div>
+            </section>
+
+            <div class="row d-flex card align-items-start no-gutters flex-md-column border-0 flex-lg-row">
+                <section class="card border-0 mb-3 p-3 col-lg-8 subscribe">
+                    <h1 class="text-uppercase mg-follow-item font-weight-bold mt-3 mb-2 ml-0">
+                        Subscribe</h1>
+                    <div class="d-flex flex-column flex-md-row p-3 gray-box">
+                        <img src="images/subscribe-overlap-img.jpg" alt="" class="subscribe-overlap pt-3 pb-3 pr-4">
+                        <div class="d-flex flex-column align-items-start mt-3">
+                            <h2 class="font-weight-bold container-fluid d-flex justify-content-center justify-content-md-start mt-2 text-center text-md-left">
+                                In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h2>
+                            <p class="mt-2 container-fluid d-flex justify-content-center justify-content-md-start text-md-left text-center">
+                                All Access + Weekly Delivery.<br>Choose A Membership That's Perfect for You!
+                            </p>
+                            <button type="button" class="btn btn-md pt-1 pb-1 btn-secondary btn-lg font-weight-bold border-0 rounded-0" id="subscribe-btn">SUBSCRIBE</button>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card border-0 mb-3 p-3 col-lg-4 newsletter">
+                    <h1 class="text-uppercase mg-follow-item font-weight-bold mt-2 mt-lg-3 mb-2">Newsletter</h1>
+                    <div class="media d-flex flex-column flex-md-row card border-bottom">
+                        <img src="images/newsletter-img.png" alt="" class="newsletter-img img-cover mr-md-3">
+                        <div class="media-body d-flex flex-column">
+                            <h2 class="font-weight-bold d-flex justify-content-center align-items-center align-items-md-start mt-4">
+                                The Starting 5</h2>
+                            <p class="d-flex justify-content-center align-items-center text-center text-md-left">See why nearly a quarter of a million subscribers begin their day with the Starting 5.</p>
+                            <button type="button" class="d-flex align-items-md-start text-center btn btn-md pt-1 mt-3 btn-secondary font-weight-bold border-0 rounded-0 mb-3">SIGN
+                                UP</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <footer class="container-fluid footer border-top">
+            <div class="footer-copy-rrss border-bottom d-flex flex-column flex-md-row align-items-md- justify-content-between mb-md-2 pb-md-2">
+                <div class="container-fluid pl-0 d-flex flex-column flex-md-row pt-4">
+                    <a href="#">
+                        <svg class="logo" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+                            <path
+                                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                            </path>
+                        </svg>
+                    </a>
+                    <p class="copyright mt-md-3 ml-md-2 mt-2 mb-1">© 2020 NEWSWEEK</p>
+                </div>
+                <div class="container-fluid pl-0 mt-0 mb-md-0 pt-1 p-md-0 pb-0 d-flex justify-content-start justify-content-md-end align-items-end">
+                    <a href="#" class="mr-2"><i class="fab fa-lg text-secondary fa-facebook-square"></i></a>
+                    <a href="#" class="mr-2"><i class="fab fa-lg text-secondary fa-twitter"></i></a>
+                    <a href="#" class="mr-2"><i class="fab fa-lg text-secondary fa-instagram"></i></a>
+                    <a href="#" class="mr-2"><i class="fab fa-lg text-secondary fa-tumblr"></i></a>
+                    <a href="#" class="mr-2"><i class="fab fa-lg text-secondary fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="d-flex editions">
+                <h3 class="font-weight-bold mr-2 mt-1">Editions:</h3>
+                <ul class="d-flex flex-wrap">
+                    <li><a href="#">U.S. Edition <span class="pl-2">|</span></a></li>
+                    <li><a href="#">日本<span class="pl-2">|</span></a></li>
+                    <li><a href="#">Pakistan<span class="pl-2">|</span></a></li>
+                    <li><a href="#">Polska<span class="pl-2">|</span></a></li>
+                    <li><a href="#">România</a></li>
+                </ul>
+            </div>
+            <div class="d-flex editions flex-row flex-wrap pb-4">
+                <a href="#">About Us<span class="pl-2">|</span></a>
+                <a href="#">Corrections<span class="pl-2">|</span></a>
+                <a href="#">Contact Us<span class="pl-2">|</span></a>
+                <a href="#">Editorial Guidelines<span class="pl-2">|</span></a>
+                <a href="#">Advertise<span class="pl-2">|</span></a>
+                <a href="#">Copyright<span class="pl-2">|</span></a>
+                <a href="#">Terms & Conditions<span class="pl-2">|</span></a>
+                <a href="#">Privacy Policy<span class="pl-2">|</span></a>
+                <a href="#">Cookie Policy<span class="pl-2">|</span></a>
+                <a href="#">Terms of Sale<span class="pl-2">|</span></a>
+                <a href="#">Archive<span class="pl-2">|</span></a>
+                <a href="#">Announcements<span class="pl-2">|</span></a>
+                <a href="#">Consent preferences</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
